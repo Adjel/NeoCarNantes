@@ -1,26 +1,53 @@
 "use client";
 import Image from "next/image";
-import Header from "./Component/Header/Header";
+import Header from "@/components/Header/Header";
 import styled from "styled-components";
-import carIngGarage from "./Images/bmwstyle.png";
+import carIngGarage from "../images/bmwstyle.png";
+import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
-    <HomeWrapper>
+    <Wrapper>
       <Image
-        alt="carIngGarage"
+        alt="a beautifull car in beautifull garage "
         src={carIngGarage}
         placeholder="blur"
         quality={100}
         fill
-        sizes="100vw"
         style={{
           objectFit: "cover",
+          zIndex: "-1",
+          position: "absolute",
+          top: 0,
         }}
       />
-      <Header />
-    </HomeWrapper>
+      <ScrollWrapper>
+        <HeaderWrapper>
+          <Header />
+        </HeaderWrapper>
+        <Hero />
+      </ScrollWrapper>
+    </Wrapper>
   );
 }
 
-const HomeWrapper = styled.div``;
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+`;
+
+const ScrollWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+`;
+
+const HeaderWrapper = styled.div`
+  position: fixed;
+  width: 100%;
+`;
