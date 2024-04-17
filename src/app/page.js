@@ -10,6 +10,7 @@ export default function Home() {
       <Image
         alt="carIngGarage"
         src={carIngGarage}
+        placeholder="blur"
         quality={100}
         fill
         sizes="100vw"
