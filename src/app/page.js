@@ -2,54 +2,48 @@
 import Image from "next/image";
 import Header from "@/app/component/Header/Header";
 import styled from "styled-components";
-import carIngGarage from "../app/images/bmwstyle.png";
+
 import Hero from "@/app/component/Hero";
+import Features from "./component/Features/Features";
 
 export default function Home() {
   return (
     <Wrapper>
-      <Image
-        alt="a beautifull car in beautifull garage "
-        src={carIngGarage}
-        placeholder="blur"
-        quality={100}
-        fill
-        style={{
-          objectFit: "cover",
-          zIndex: "-1",
-          position: "absolute",
-          top: 0,
-        }}
-      />
       <HeaderWrapper>
         <Header />
       </HeaderWrapper>
       <ScrollWrapper>
         <Hero />
+        <Features />
       </ScrollWrapper>
     </Wrapper>
   );
 }
 
 const Wrapper = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  max-height: 100vh;
   overflow: hidden;
-`;
-
-const ScrollWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100vh;
-  overflow: auto;
-  padding-top: 36px;
+  background-image: url("/bmwstyle.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 `;
 
 const HeaderWrapper = styled.div`
   width: 100%;
   overflow: hidden;
   position: fixed;
+`;
+
+const ScrollWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  overflow-y: auto;
+  padding-top: 36px;
 `;
