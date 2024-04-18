@@ -84,6 +84,7 @@ const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   padding-top: 80px;
+  gap: 16px;
   background: hsla(0, 0%, 0%, 0.7);
 `;
 const Title = styled.div`
