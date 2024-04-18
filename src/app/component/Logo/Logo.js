@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import brandLogo from "../../Images/brandLogo.jpeg";
+import brandLogo from "../../../app/images/brandLogo.jpeg";
 
 function Logo() {
   return (

@@ -1,10 +1,12 @@
 "use client";
 import React from "react";
 import styled from "styled-components";
+import HeroLogo from "../HeroLogo/HeroLogo";
 
 function Hero() {
   return (
     <Wrapper>
+      <HeroLogo />
       <Brand>NEOCARNANTES</Brand>
       <BrandContent>Atelier de Réparation Automobile</BrandContent>
     </Wrapper>
@@ -14,12 +16,12 @@ function Hero() {
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   height: 100%;
-  border: 3px solid cyan;
+  padding-top: 48px;
   color: white;
   background: transparent;
-  border: 3px solid cyan;
 `;
 
 const Brand = styled.h1`
