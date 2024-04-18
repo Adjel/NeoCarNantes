@@ -7,6 +7,7 @@ const links = [
   { name: "le garage" },
   { name: "prestations" },
   { name: "avis" },
+  { name: "tarifs" },
   { name: "contact" },
 ];
 
