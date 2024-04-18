@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
-import Header from "@/components/Header/Header";
+import Header from "@/app/component/Header/Header";
 import styled from "styled-components";
-import carIngGarage from "../images/bmwstyle.png";
-import Hero from "@/components/Hero";
+import carIngGarage from "../app/images/bmwstyle.png";
+import Hero from "@/app/component/Hero";
 
 export default function Home() {
   return (
@@ -21,10 +21,10 @@ export default function Home() {
           top: 0,
         }}
       />
+      <HeaderWrapper>
+        <Header />
+      </HeaderWrapper>
       <ScrollWrapper>
-        <HeaderWrapper>
-          <Header />
-        </HeaderWrapper>
         <Hero />
       </ScrollWrapper>
     </Wrapper>
@@ -45,9 +45,11 @@ const ScrollWrapper = styled.div`
   width: 100%;
   height: 100vh;
   overflow: auto;
+  padding-top: 36px;
 `;
 
 const HeaderWrapper = styled.div`
-  position: fixed;
   width: 100%;
+  overflow: hidden;
+  position: fixed;
 `;
