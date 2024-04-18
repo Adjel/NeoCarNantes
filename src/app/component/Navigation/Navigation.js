@@ -4,8 +4,8 @@ import styled from "styled-components";
 import NavLink from "../NavLink/NavLink";
 
 const links = [
-  { name: "presentation" },
-  { name: "galeries photo" },
+  { name: "le garage" },
+  { name: "prestations" },
   { name: "avis" },
   { name: "contact" },
 ];

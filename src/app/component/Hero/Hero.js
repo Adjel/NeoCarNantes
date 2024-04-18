@@ -2,6 +2,7 @@
 import React from "react";
 import styled from "styled-components";
 import HeroLogo from "../HeroLogo/HeroLogo";
+import BrandStory from "../BrandStory/BrandStory";
 
 function Hero() {
   return (
@@ -9,6 +10,7 @@ function Hero() {
       <HeroLogo />
       <Brand>NEOCARNANTES</Brand>
       <BrandContent>Atelier de Réparation Automobile</BrandContent>
+      <BrandStory />
     </Wrapper>
   );
 }
