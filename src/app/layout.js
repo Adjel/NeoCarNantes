@@ -1,4 +1,10 @@
-import { Inter } from "next/font/google";
+import {
+  Inter,
+  Pathway_Gothic_One,
+  Ubuntu_Condensed,
+  Yanone_Kaffeesatz,
+  Fjalla_One,
+} from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });

@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import Header from "@/app/component/Header/Header";
 import styled from "styled-components";
 
