@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import Decoration from "../Decoration/Decoration";
 
 export default function BrandStory() {
   return (
     <Background>
       <Wrapper>
         <Title>HISTOIRE</Title>
-        <Decoration />
+        <Decoration backgroundColor="black" />
         <Content>
           NeoCarNantes à été créé à l'été 2020 par Quentin dans son garage
           attenant à sa maison de St Philbert de Grand Lieu alors qu'il cumulait
@@ -52,12 +53,6 @@ const Wrapper = styled.div`
   gap: 22px;
   width: 50%;
   background: white;
-`;
-
-const Decoration = styled.div`
-  width: 36px;
-  height: 3px;
-  background: black;
 `;
 
 const Title = styled.h1`
