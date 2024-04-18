@@ -64,7 +64,7 @@ export default function Features() {
     <Wrapper>
       <Title>PRESTATIONS</Title>
       <SubTitle>Rien que pour vous !</SubTitle>
-      <Grid>
+      <FlexWrapper>
         {featuresData.map(({ title, feature, subFeature, featureInfo }) => (
           <FeatureGridItem
             title={title}
@@ -73,7 +73,7 @@ export default function Features() {
             featureInfo={featureInfo}
           />
         ))}
-      </Grid>
+      </FlexWrapper>
     </Wrapper>
   );
 }
@@ -105,7 +105,7 @@ const SubTitle = styled.div`
   font-weight: 200;
 `;
 
-const Grid = styled.div`
+const FlexWrapper = styled.div`
   display: flex;
   width: 65%;
   flex-wrap: wrap;
