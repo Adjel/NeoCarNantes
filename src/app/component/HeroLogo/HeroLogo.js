@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../../images/logo1.svg";
 import Image from "next/image";
-import styled from "styled-components";
+
 function HeroLogo() {
   return (
     <Image

@@ -26,9 +26,9 @@ const Wrapper = styled.div`
   min-height: 350px;
   flex-direction: column;
   align-items: center;
-  gap: 36px;
+  gap: 26px;
   background: hsla(0, 4%, 70%, 0.55);
-  padding: 36px 14px;
+  padding: 25px 8px;
 `;
 const FeatureTitle = styled.p`
   flex: 1;

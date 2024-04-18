@@ -1,7 +1,6 @@
 "use client";
 import Header from "@/app/component/Header/Header";
 import styled from "styled-components";
-
 import Hero from "@/app/component/Hero";
 import Features from "./component/Features/Features";
 
