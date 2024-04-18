@@ -10,11 +10,11 @@ const dividerBorder = "3px solid hsla(0, 0%, 100%, 0.45)";
 function Hero() {
   return (
     <Wrapper>
-      <LogoWrapper>
+      <BrandWrapper>
         <HeroLogo />
-      </LogoWrapper>
-      <Brand>NEOCARNANTES</Brand>
-      <BrandContent>Atelier de Réparation Automobile</BrandContent>
+        <Brand>NEOCARNANTES</Brand>
+        <BrandContent>Atelier de Réparation Automobile</BrandContent>
+      </BrandWrapper>
       <Divider style={{ "--dividerBorder": dividerBorder }}>
         <Services />
       </Divider>
@@ -30,19 +30,17 @@ const Wrapper = styled.div`
   flex-wrap: nowrap;
   width: 100%;
   height: 100%;
-  gap: 50px;
-  padding-top: 48px;
   color: white;
   background: transparent;
 `;
 
-const LogoWrapper = styled.div`
+const BrandWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
-  padding-top: 48px;
+  height: 100vh;
   color: white;
   background: transparent;
 `;
