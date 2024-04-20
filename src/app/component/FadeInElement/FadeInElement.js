@@ -8,7 +8,7 @@ const StyledElement = styled.div`
   align-items: center;
   opacity: ${(props) => (props.visible ? 1 : 0)};
   transition: opacity 3s linear;
-  padding-top: 64px;
+  padding: 64px 0;
 `;
 
 const FadeInElement = ({ children, partialVisibility = true }) => {
