@@ -1,21 +1,27 @@
 import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
-import FadeInElement from "../FadeInElement/FadeInElement";
-import photo1 from "/public/golfstyle.png";
-import photo2 from "/public/lambostyle.jpeg";
+import photo1 from "/public/customers/photo1.jpeg";
+import photo2 from "/public/customers/photo2.jpeg";
+import photo3 from "/public/customers/photo3.jpeg";
+import photo4 from "/public/customers/photo4.jpeg";
+import photo5 from "/public/customers/photo5.jpeg";
+import photo6 from "/public/customers/photo6.jpeg";
+import photo7 from "/public/customers/photo7.jpeg";
+import photo8 from "/public/customers/photo8.jpeg";
+import photo9 from "/public/customers/photo9.jpeg";
 import CustomerItem from "../CustomerItem/CustomerItem";
 
 const images = [
   photo1,
   photo2,
-  photo1,
-  photo1,
-  photo2,
-  photo1,
-  photo1,
-  photo2,
-  photo1,
+  photo3,
+  photo4,
+  photo5,
+  photo6,
+  photo7,
+  photo8,
+  photo9,
 ];
 
 const Customers = () => {
@@ -44,24 +50,12 @@ const Wrapper = styled.div`
 const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 80%;
   align-items: center;
   justify-items: center;
   justify-content: center;
   align-content: center;
-  padding: 64px 0;
+  padding: 64px;
 `;
-
-const GridItem = styled(Image)`
-  object-fit: cover;
-  width: 400px;
-  height: 300px;
-
-  &:hover {
-    filter: brightness(80%);
-  }
-`;
-
 const Title = styled.div`
   color: white;
   letter-spacing: 0.1em;

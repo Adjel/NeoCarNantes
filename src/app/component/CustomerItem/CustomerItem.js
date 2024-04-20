@@ -9,7 +9,7 @@ const fill = () => {};
 
 export default function CustomerItem({ alt, src }) {
   return (
-    <Wrapper position={"relative"}>
+    <FadeInElement position={"relative"}>
       <HoverWrapper>
         <CustomerPhoto alt={alt} src={src} responsive />
         <ButtonsWrapper>
@@ -17,14 +17,9 @@ export default function CustomerItem({ alt, src }) {
           <HoverIcon src={shareIcon} />
         </ButtonsWrapper>
       </HoverWrapper>
-    </Wrapper>
+    </FadeInElement>
   );
 }
-
-const Wrapper = styled(FadeInElement)`
-  display: flex;
-  flex-direction: column;
-`;
 
 const HoverIcon = styled(Image)`
   filter: invert(100%);
@@ -36,7 +31,7 @@ const HoverIcon = styled(Image)`
 
 const CustomerPhoto = styled(Image)`
   object-fit: cover;
-  width: 400px;
+  width: 430px;
   height: 300px;
 `;
 
@@ -56,6 +51,7 @@ const ButtonsWrapper = styled.div`
 
 const HoverWrapper = styled.div`
   display: flex;
+  width: 100%;
 
   &:hover {
     > ${ButtonsWrapper} {
