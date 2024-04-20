@@ -5,8 +5,6 @@ import FadeInElement from "../FadeInElement/FadeInElement";
 import LikeIconButton from "../LikeIconButton";
 import ShareIconButton from "../ShareIconButton";
 
-const fill = () => {};
-
 export default function CustomerItem({ alt, src }) {
   return (
     <FadeInElement position={"relative"}>
