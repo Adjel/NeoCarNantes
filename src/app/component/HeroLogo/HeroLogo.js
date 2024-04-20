@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../images/logo1.svg";
+import logo from "/public/logo1.svg";
 import Image from "next/image";
 
 function HeroLogo() {

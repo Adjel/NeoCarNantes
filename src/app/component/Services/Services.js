@@ -2,9 +2,9 @@ import { Content } from "next/font/google";
 import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
-import logo2 from "../../images/logo2.svg";
-import logo3 from "../../images/logo3.svg";
-import logo4 from "../../images/logo4.svg";
+import logo2 from "/public/logo2.svg";
+import logo3 from "/public/logo3.svg";
+import logo4 from "/public/logo4.svg";
 
 const services = [
   { description: "réparation toutes marques", icon: logo2 },
