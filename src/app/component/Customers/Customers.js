@@ -4,6 +4,7 @@ import Image from "next/image";
 import FadeInElement from "../FadeInElement/FadeInElement";
 import photo1 from "/public/golfstyle.png";
 import photo2 from "/public/lambostyle.jpeg";
+import CustomerItem from "../CustomerItem/CustomerItem";
 
 const images = [
   photo1,
@@ -22,23 +23,11 @@ const Customers = () => {
     <Wrapper>
       <Title>une passion à partager</Title>
       <Content>Quelques pépites passées chez nous</Content>
-      <FadeInElement>
-        <Grid>
-          {images.map((image, index) => (
-            <Image
-              key={index}
-              alt="a customer car"
-              src={image}
-              responsive
-              style={{
-                objectFit: "cover",
-                width: "400px",
-                height: "300px",
-              }}
-            />
-          ))}
-        </Grid>
-      </FadeInElement>
+      <Grid>
+        {images.map((image, index) => (
+          <CustomerItem key={index} alt="a customer car" src={image} />
+        ))}
+      </Grid>
     </Wrapper>
   );
 };
@@ -60,19 +49,18 @@ const Grid = styled.div`
   justify-items: center;
   justify-content: center;
   align-content: center;
+  padding: 64px 0;
 `;
 
-/*
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  width: 100%;
-  border: " 3px solid red";
-  align-items: center;
-  justify-items: center;
-  justify-content: center;
-  align-content: center;
-`;*/
+const GridItem = styled(Image)`
+  object-fit: cover;
+  width: 400px;
+  height: 300px;
+
+  &:hover {
+    filter: brightness(80%);
+  }
+`;
 
 const Title = styled.div`
   color: white;

@@ -3,15 +3,15 @@ import VisibilitySensor from "react-visibility-sensor";
 import styled from "styled-components";
 
 const StyledElement = styled.div`
+  position: var(--position);
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: ${(props) => (props.visible ? 1 : 0)};
-  transition: opacity 3s linear;
-  padding: 64px 0;
+  transition: opacity 1s linear;
 `;
 
-const FadeInElement = ({ children, partialVisibility = true }) => {
+const FadeInElement = ({ position, children, partialVisibility = true }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleVisibilityChange = (isVisible) => {
@@ -23,7 +23,9 @@ const FadeInElement = ({ children, partialVisibility = true }) => {
       onChange={handleVisibilityChange}
       partialVisibility={partialVisibility}
     >
-      <StyledElement visible={isVisible}>{children}</StyledElement>
+      <StyledElement visible={isVisible} style={{ "--position": position }}>
+        {children}
+      </StyledElement>
     </VisibilitySensor>
   );
 };
