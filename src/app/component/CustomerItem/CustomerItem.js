@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import styled from "styled-components";
 import FadeInElement from "../FadeInElement/FadeInElement";
-import shareIcon from "/public/icons/icon_share_24.svg";
-import favIcon from "/public/icons/icon_favorite_24.svg";
+import LikeIconButton from "../LikeIconButton";
+import ShareIconButton from "../ShareIconButton";
 
 const fill = () => {};
 
@@ -13,21 +13,13 @@ export default function CustomerItem({ alt, src }) {
       <HoverWrapper>
         <CustomerPhoto alt={alt} src={src} responsive />
         <ButtonsWrapper>
-          <HoverIcon src={favIcon} onClick={fill} />
-          <HoverIcon src={shareIcon} />
+          <LikeIconButton />
+          <ShareIconButton />
         </ButtonsWrapper>
       </HoverWrapper>
     </FadeInElement>
   );
 }
-
-const HoverIcon = styled(Image)`
-  filter: invert(100%);
-
-  &:hover {
-    filter: invert(80%);
-  }
-`;
 
 const CustomerPhoto = styled(Image)`
   object-fit: cover;
