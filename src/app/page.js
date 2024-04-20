@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Hero from "@/app/component/Hero";
 import Features from "./component/Features/Features";
 import Customers from "./component/Customers/Customers";
+import Contact from "./component/Contact/Contact";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <Hero />
         <Features />
         <Customers />
+        <Contact />
       </ScrollWrapper>
     </Wrapper>
   );
