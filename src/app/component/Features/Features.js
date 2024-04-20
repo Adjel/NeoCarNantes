@@ -84,7 +84,7 @@ const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   padding-top: 80px;
-  gap: 16px;
+  gap: 10px;
   background: hsla(0, 0%, 0%, 0.7);
 `;
 const Title = styled.div`
@@ -92,11 +92,11 @@ const Title = styled.div`
   letter-spacing: 0.1em;
   font-family: din-next-w01-light, din-next-w02-light, din-next-w10-light,
     sans-serif;
-  font-weight: bold;
   font-size: ${34 / 16}rem;
   font-weight: 180;
   line-height: normal;
   text-align: center;
+  font-family: "Fjalla One";
 `;
 const SubTitle = styled.div`
   color: white;

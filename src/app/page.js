@@ -3,6 +3,7 @@ import Header from "@/app/component/Header/Header";
 import styled from "styled-components";
 import Hero from "@/app/component/Hero";
 import Features from "./component/Features/Features";
+import Customers from "./component/Customers/Customers";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <ScrollWrapper>
         <Hero />
         <Features />
+        <Customers />
       </ScrollWrapper>
     </Wrapper>
   );
@@ -40,7 +42,7 @@ const ScrollWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-wrap: nowrap;
+  gap: 64px;
   width: 100%;
   overflow-y: auto;
   padding-top: 36px;
