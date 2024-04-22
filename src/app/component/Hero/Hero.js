@@ -60,7 +60,6 @@ const Divider = styled.div`
   width: 100%;
   height: 100vh;
   padding: 100px;
-  margin: 50px 0;
   background: hsla(0, 0%, 0%, 0.2);
 `;
 

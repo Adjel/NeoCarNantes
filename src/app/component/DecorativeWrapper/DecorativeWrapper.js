@@ -2,9 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import Decoration from "../Decoration/Decoration";
 
-function DecorativeWrapper({ title, children, textAlign, paddingStart }) {
+function DecorativeWrapper({
+  title,
+  children,
+  textAlign,
+  paddingStart,
+  marginTop = "0",
+}) {
   return (
-    <Background>
+    <Background style={{ "--margin-top": marginTop }}>
       <Wrapper>
         <Title>{title}</Title>
         <Decoration backgroundColor="black" />
@@ -23,12 +29,12 @@ const Background = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
   padding: 68px;
   padding-inline: 64px;
   width: 100%;
   height: auto;
   background: hsla(0, 4%, 68%, 0.9);
+  margin-top: var(--margin-top);
 `;
 
 const Wrapper = styled.div`
