@@ -4,24 +4,25 @@ import styled from "styled-components";
 import NavLink from "../NavLink/NavLink";
 
 const links = [
-  { name: "le garage" },
-  { name: "prestations" },
-  { name: "avis" },
-  { name: "tarifs" },
-  { name: "contact" },
+  { name: "le garage", link: "#hero" },
+  { name: "tarifs", link: "#features" },
+  { name: "avis", link: "#customers" },
+  { name: "contact", link: "#contact" },
 ];
 
 function Navigation() {
   return (
     <Nav>
-      {links.map(({ name }) => (
-        <NavLink>{name}</NavLink>
+      {links.map(({ name, link }) => (
+        <NavLink key={link} link={link}>
+          {name}
+        </NavLink>
       ))}
     </Nav>
   );
 }
 
-const Nav = styled.nav`
+const Nav = styled.div`
   display: flex;
   flex: 3;
   justify-content: space-around;

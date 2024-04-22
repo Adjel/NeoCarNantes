@@ -65,14 +65,17 @@ export default function Features() {
       <Title>PRESTATIONS</Title>
       <SubTitle>Rien que pour vous !</SubTitle>
       <FlexWrapper>
-        {featuresData.map(({ title, feature, subFeature, featureInfo }) => (
-          <FeatureGridItem
-            title={title}
-            feature={feature}
-            subFeature={subFeature}
-            featureInfo={featureInfo}
-          />
-        ))}
+        {featuresData.map(
+          ({ title, feature, subFeature, featureInfo }, index) => (
+            <FeatureGridItem
+              key={index}
+              title={title}
+              feature={feature}
+              subFeature={subFeature}
+              featureInfo={featureInfo}
+            />
+          )
+        )}
       </FlexWrapper>
     </Wrapper>
   );

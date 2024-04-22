@@ -14,10 +14,18 @@ export default function Home() {
         <Header />
       </HeaderWrapper>
       <ScrollWrapper>
-        <Hero />
-        <Features />
-        <Customers />
-        <Contact />
+        <section id="hero">
+          <Hero />
+        </section>
+        <section id="features">
+          <Features />
+        </section>
+        <section id="customers">
+          <Customers />
+        </section>
+        <section id="contact" style={{ width: "100%" }}>
+          <Contact />
+        </section>
         <Footer />
       </ScrollWrapper>
     </Wrapper>
