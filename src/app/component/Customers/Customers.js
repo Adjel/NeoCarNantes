@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Image from "next/image";
 import photo1 from "/public/customers/photo1.jpeg";
 import photo2 from "/public/customers/photo2.jpeg";
 import photo3 from "/public/customers/photo3.jpeg";
