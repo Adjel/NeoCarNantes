@@ -5,6 +5,7 @@ import NavLink from "../NavLink/NavLink";
 
 const links = [
   { name: "le garage", link: "#hero" },
+  { name: "services", link: "#services" },
   { name: "tarifs", link: "#features" },
   { name: "avis", link: "#customers" },
   { name: "contact", link: "#contact" },

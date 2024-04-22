@@ -16,7 +16,9 @@ function Hero() {
         <BrandContent>Atelier de Réparation Automobile</BrandContent>
       </BrandWrapper>
       <Divider style={{ "--dividerBorder": dividerBorder }}>
-        <Services />
+        <section id="services">
+          <Services />
+        </section>
       </Divider>
       <BrandStory />
     </Wrapper>
