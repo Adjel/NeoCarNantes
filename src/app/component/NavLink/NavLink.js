@@ -1,12 +1,13 @@
+"use client";
 import React from "react";
 import styled from "styled-components";
 
-function NavLink({ children }) {
+function NavLink({ children, link }) {
   let color = "hsl(0 100 27)";
   let display = "none";
 
   return (
-    <Wrapper>
+    <Wrapper href={link}>
       <Decoration style={{ "--display": `${display}` }} />
       <NavLinkItem style={{ "--color": `${color}` }}>{children}</NavLinkItem>
     </Wrapper>
@@ -20,13 +21,13 @@ const Decoration = styled.div`
   display: var(--display);
 `;
 
-const NavLinkItem = styled.a`
+const NavLinkItem = styled.div`
   font-size: ${16 / 16}rem;
   text-transform: uppercase;
   color: var(--color);
 `;
 
-const Wrapper = styled.div`
+const Wrapper = styled.a`
   display: flex;
   flex-direction: column;
   align-items: center;

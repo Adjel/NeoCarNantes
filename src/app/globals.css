@@ -108,5 +108,8 @@ a {
   }
 }
 
-
+/* To make the page smooth scrolling when cliking on the navBar */
+* {
+  scroll-behavior: smooth;
+}
 

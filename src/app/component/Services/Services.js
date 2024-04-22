@@ -32,8 +32,8 @@ export default function Services() {
 
   return (
     <Wrapper>
-      {services.map(({ description, icon }) => (
-        <ServicesItem description={description} icon={icon} />
+      {services.map(({ description, icon }, index) => (
+        <ServicesItem key={index} description={description} icon={icon} />
       ))}
     </Wrapper>
   );
