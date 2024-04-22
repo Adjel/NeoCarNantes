@@ -7,10 +7,7 @@ function NavLink({ children, link }) {
   let display = "none";
 
   return (
-    <Wrapper
-      href={link}
-      //onClick={(e) => handleNavigationClick(e, "contact")}
-    >
+    <Wrapper href={link}>
       <Decoration style={{ "--display": `${display}` }} />
       <NavLinkItem style={{ "--color": `${color}` }}>{children}</NavLinkItem>
     </Wrapper>
