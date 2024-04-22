@@ -8,6 +8,7 @@ export default function BrandStory() {
       title={"nous contacter"}
       textAlign={"start"}
       paddingStart={"126px"}
+      marginTop="50px"
     >
       10 Impasse de Belgique 44300 NANTES <br />
       <br /> 06.11.11.70.44 <br />
