@@ -7,24 +7,24 @@ export default function Footer() {
   return (
     <Wrapper>
       <MainWrapper>
-        <ContentWrapper>
+        <AdaptiveHeightWrapper>
           <p>NEOCARNANTES</p>
           <p>10 IMPASSE DE BELGIQUE</p>
           <p>44300 NANTES</p>
-        </ContentWrapper>
-        <ContentWrapper>
+        </AdaptiveHeightWrapper>
+        <AdaptiveHeightWrapper>
           <p>44300 NANTES SUIVEZ NOUS SUR INSTAGRAM !</p>
           <p>neocarnantes</p>
           <InstagramIcon />
-        </ContentWrapper>
-        <ContentWrapper>
+        </AdaptiveHeightWrapper>
+        <BasicWrapper>
           <p>LAISSEZ UN AVIS SUR GOOGLE !</p>
-        </ContentWrapper>
-        <RateStarsComponent />
+          <RateStarsComponent />
+        </BasicWrapper>
       </MainWrapper>
-      <ContentWrapper>
+      <AdaptiveHeightWrapper>
         <p>© Quentin & Chacha NeoCarNantes</p>
-      </ContentWrapper>
+      </AdaptiveHeightWrapper>
     </Wrapper>
   );
 }
@@ -37,7 +37,6 @@ const Wrapper = styled.div`
   width: 100%;
   min-height: 324px;
   background: hsl(0 1 18);
-  border: 3px solid yellow;
 `;
 
 const MainWrapper = styled.div`
@@ -47,18 +46,23 @@ const MainWrapper = styled.div`
   width: 100%;
   gap: 50px;
   margin: 48px 0px;
-  border: 3px solid red;
 `;
 
-const ContentWrapper = styled.div`
+const BasicWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   gap: 2px;
+  height: 80px;
 
   > p {
     font-size: ${12 / 16}rem;
     font-weight: 170;
     text-align: center;
   }
+`;
+
+const AdaptiveHeightWrapper = styled(BasicWrapper)`
+  height: revert;
 `;
