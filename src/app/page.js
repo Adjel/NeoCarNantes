@@ -5,6 +5,7 @@ import Hero from "@/app/component/Hero";
 import Features from "./component/Features/Features";
 import Customers from "./component/Customers/Customers";
 import Contact from "./component/Contact/Contact";
+import Footer from "./component/Footer/Footer";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <Features />
         <Customers />
         <Contact />
+        <Footer />
       </ScrollWrapper>
     </Wrapper>
   );
@@ -44,7 +46,7 @@ const ScrollWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 64px;
+
   width: 100%;
   overflow-y: auto;
   padding-top: 36px;
