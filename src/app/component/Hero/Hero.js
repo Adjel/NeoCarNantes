@@ -5,8 +5,6 @@ import HeroLogo from "../HeroLogo/HeroLogo";
 import BrandStory from "../BrandStory/BrandStory";
 import Services from "../Services/Services";
 
-const dividerBorder = "3px solid hsla(0, 0%, 100%, 0.45)";
-
 function Hero() {
   return (
     <Wrapper>
@@ -15,11 +13,9 @@ function Hero() {
         <Brand>NEOCARNANTES</Brand>
         <BrandContent>Atelier de Réparation Automobile</BrandContent>
       </BrandWrapper>
-      <Divider style={{ "--dividerBorder": dividerBorder }}>
-        <section id="services">
-          <Services />
-        </section>
-      </Divider>
+      <Section id="services">
+        <Services />
+      </Section>
       <BrandStory />
     </Wrapper>
   );
@@ -56,7 +52,7 @@ const Brand = styled.h1`
   font-family: "Pathway Gothic One", sans-serif;
 `;
 
-const Divider = styled.div`
+const Section = styled.section`
   display: flex;
   justify-content: center;
   width: 100%;
