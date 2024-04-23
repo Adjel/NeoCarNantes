@@ -1,3 +1,4 @@
+import { COLORS, QUERIES } from "@/app/constant";
 import { FaRegStar } from "react-icons/fa";
 import styled from "styled-components";
 
@@ -16,5 +17,10 @@ const Wrapper = styled.div``;
 const Star = styled(FaRegStar)`
   width: 30px;
   height: 30px;
-  color: hsl(215 75 46);
+  color: ${COLORS.blue};
+
+  @media ${QUERIES.phoneAndSmaller} {
+    width: 18px;
+    height: 18px;
+  }
 `;

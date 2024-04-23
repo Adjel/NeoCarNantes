@@ -67,6 +67,14 @@ const Title = styled.h1`
   color: ${COLORS.primary};
   font-weight: ${FONTWEIGHT.tier25};
   text-transform: uppercase;
+  font-size: ${FONTSIZE.title.desktop};
+
+  @media ${QUERIES.tabletAndSmaller} {
+    font-size: ${FONTSIZE.title.tablet};
+  }
+  @media ${QUERIES.phoneAndSmaller} {
+    font-size: ${FONTSIZE.title.phone};
+  }
 `;
 
 const Content = styled.p`

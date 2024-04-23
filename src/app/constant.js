@@ -6,6 +6,7 @@ export const COLORS = {
     transparentGray: "hsla(0, 4%, 68%, 0.9)",
   },
   primary: "hsl(0 100 27)",
+  blue: "hsl(215 75 46)",
 };
 
 export const FONTSIZE = {
@@ -23,6 +24,11 @@ export const FONTSIZE = {
     desktop: `${14 / 16}rem`,
     tablet: `${12 / 16}rem`,
     phone: `${10 / 16}rem`,
+  },
+  little: {
+    desktop: `${12 / 16}rem`,
+    tablet: `${10 / 16}rem`,
+    phone: `${8 / 16}rem`,
   },
 };
 
