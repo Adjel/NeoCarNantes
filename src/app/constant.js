@@ -1,15 +1,31 @@
 export const COLORS = {
   background: {
     darkGray: "hsl(0 1 18)",
-    transparentDarkGray: "hsla(0, 0%, 0%, 0.7)",
+    transparentBlack: "hsla(0, 0%, 0%, 0.7)",
     transparentLightGray: "hsla(0, 4%, 70%, 0.55)",
     transparentGray: "hsla(0, 4%, 68%, 0.9)",
+    transparentLightBlack: "hsla(0, 0%, 0%, 0.2)",
   },
   primary: "hsl(0 100 27)",
   blue: "hsl(215 75 46)",
 };
 
 export const FONTSIZE = {
+  big: {
+    desktop: `${64 / 16}rem`,
+    tablet: `${60 / 16}rem`,
+    phone: `${58 / 16}rem`,
+  },
+  normal: {
+    desktop: `${16 / 16}rem`,
+    tablet: `${14 / 16}rem`,
+    phone: `${12 / 16}rem`,
+  },
+  bigItem: {
+    desktop: `${18 / 16}rem`,
+    tablet: `${16 / 16}rem`,
+    phone: `${10 / 16}rem`,
+  },
   title: {
     desktop: `${34 / 16}rem`,
     tablet: `${34 / 16}rem`,

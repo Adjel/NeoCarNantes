@@ -4,7 +4,13 @@ import Image from "next/image";
 import logo2 from "/public/logo2.svg";
 import logo3 from "/public/logo3.svg";
 import logo4 from "/public/logo4.svg";
-import { QUERIES } from "@/app/constant";
+import {
+  COLORS,
+  FONTFAMILY,
+  FONTSIZE,
+  FONTWEIGHT,
+  QUERIES,
+} from "@/app/constant";
 
 const services = [
   { description: "réparation toutes marques", icon: logo2 },
@@ -48,7 +54,7 @@ const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   height: 100vh;
-  background: hsla(0, 0%, 0%, 0.2);
+  background: ${COLORS.background.transparentLightBlack};
 
   @media ${QUERIES.tabletAndSmaller} {
     height: 60vh;
@@ -91,13 +97,13 @@ const Item = styled.p`
   letter-spacing: normal;
   line-height: 1.2em;
   text-align: center;
-  font-size: ${18 / 16}rem;
-  font-weight: 200;
+  font-size: ${FONTSIZE.bigItem.desktop};
+  font-weight: ${FONTWEIGHT.tier2};
 
   @media ${QUERIES.tabletAndSmaller} {
-    font-size: ${16 / 16}rem;
+    font-size: ${FONTSIZE.bigItem.tablet};
   }
   @media ${QUERIES.phoneAndSmaller} {
-    font-size: ${10 / 16}rem;
+    font-size: ${FONTSIZE.bigItem.phone};
   }
 `;

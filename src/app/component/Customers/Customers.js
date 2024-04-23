@@ -10,7 +10,7 @@ import photo7 from "/public/customers/photo7.jpeg";
 import photo8 from "/public/customers/photo8.jpeg";
 import photo9 from "/public/customers/photo9.jpeg";
 import CustomerItem from "../CustomerItem/CustomerItem";
-import { QUERIES, FONTSIZE } from "@/app/constant";
+import { QUERIES, FONTSIZE, FONTWEIGHT } from "@/app/constant";
 
 const images = [
   photo1,
@@ -88,7 +88,7 @@ const Title = styled.div`
 const Content = styled.p`
   color: white;
   font-size: ${FONTSIZE.content.desktop};
-  font-weight: 200;
+  font-weight: ${FONTWEIGHT.tier2};
 
   @media ${QUERIES.phoneAndSmaller} {
     color: white;

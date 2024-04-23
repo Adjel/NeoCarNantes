@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import styled from "styled-components";
-import { COLORS } from "@/app/constant";
+import { COLORS, FONTSIZE, QUERIES } from "@/app/constant";
 
 function NavLink({ children, link, isActive }) {
   let color = isActive ? "black" : COLORS.primary;
@@ -25,9 +25,16 @@ const Decoration = styled.div`
 `;
 
 const NavLinkItem = styled.div`
-  font-size: ${16 / 16}rem;
+  font-size: ${FONTSIZE.normal.desktop};
   text-transform: uppercase;
   color: var(--color);
+
+  @media ${QUERIES.tabletAndSmaller} {
+    font-size: ${FONTSIZE.normal.tablet};
+  }
+  @media ${QUERIES.tabletAndSmaller} {
+    font-size: ${FONTSIZE.normal.phone};
+  }
 `;
 
 const Wrapper = styled.a`

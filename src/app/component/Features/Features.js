@@ -95,7 +95,7 @@ const Wrapper = styled.div`
   width: 100%;
   padding-top: 80px;
   gap: 10px;
-  background: ${COLORS.background.transparentDarkGray};
+  background: ${COLORS.background.transparentBlack};
 `;
 const Title = styled.div`
   color: white;

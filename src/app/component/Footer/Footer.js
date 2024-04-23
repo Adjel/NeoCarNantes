@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import InstagramIcon from "../InstagramIcon/InstagramIcon";
 import RateStarsComponent from "../RateStarsComponent/RateStarsComponent";
-import { FONTSIZE, FONTWEIGHT, QUERIES } from "@/app/constant";
+import { COLORS, FONTSIZE, FONTWEIGHT, QUERIES } from "@/app/constant";
 
 export default function Footer() {
   return (
@@ -37,7 +37,7 @@ const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   min-height: 324px;
-  background: hsl(0 1 18);
+  background: ${COLORS.background.darkGray};
 
   @media ${QUERIES.tabletAndSmaller} {
     min-height: 224px;
