@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import DecorativeWrapper from "../DecorativeWrapper/DecorativeWrapper";
 
-export default function BrandStory() {
+export default function Contact() {
   return (
     <DecorativeWrapper
       title={"nous contacter"}
