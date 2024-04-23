@@ -10,9 +10,6 @@ import Footer from "./component/Footer/Footer";
 export default function Home() {
   return (
     <Wrapper>
-      <HeaderWrapper>
-        <Header />
-      </HeaderWrapper>
       <ScrollWrapper>
         <section id="hero">
           <Hero />
@@ -28,6 +25,9 @@ export default function Home() {
         </section>
         <Footer />
       </ScrollWrapper>
+      <HeaderWrapper>
+        <Header />
+      </HeaderWrapper>
     </Wrapper>
   );
 }
