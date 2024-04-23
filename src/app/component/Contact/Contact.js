@@ -15,7 +15,7 @@ export default function Contact() {
       <br /> Instagram : neocarnantes <br />
       <br />
       <br />
-      <br /> HEURES D'OUVERTURE: <br />
+      <br /> HEURES D&apos;OUVERTURE: <br />
       <br /> <StrongWeekday>Lundi :</StrongWeekday> 9h-12h15 14h-19h
       <br />
       <br /> <StrongWeekday>Mardi- Jeudi:</StrongWeekday> 8h - 12h15 14h- 19h
