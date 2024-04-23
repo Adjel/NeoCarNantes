@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Decoration from "../Decoration/Decoration";
-import { QUERIES, COLORS } from "@/app/constant";
+import { QUERIES, COLORS, FONTSIZE, FONTWEIGHT } from "@/app/constant";
 
 function DecorativeWrapper({
   title,
@@ -12,7 +12,7 @@ function DecorativeWrapper({
 }) {
   return (
     <Background style={{ "--margin-top": marginTop }}>
-      <Wrapper>
+      <WhiteWrapper>
         <Title>{title}</Title>
         <Decoration backgroundColor="black" />
         <Content
@@ -20,7 +20,7 @@ function DecorativeWrapper({
         >
           {children}
         </Content>
-      </Wrapper>
+      </WhiteWrapper>
     </Background>
   );
 }
@@ -45,7 +45,7 @@ const Background = styled.div`
   }
 `;
 
-const Wrapper = styled.div`
+const WhiteWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -64,8 +64,8 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.h1`
-  color: hsl(0 100 27);
-  font-weight: 250;
+  color: ${COLORS.primary};
+  font-weight: ${FONTWEIGHT.tier25};
   text-transform: uppercase;
 `;
 
@@ -74,15 +74,15 @@ const Content = styled.p`
   height: auto;
   text-align: var(--text-align);
   padding-left: var(--padding-start);
-  font-weight: 180;
-  font-size: ${15 / 16}rem;
+  font-weight: ${FONTWEIGHT.tier1};
+  font-size: ${FONTSIZE.item.desktop};
   color: black;
 
   @media ${QUERIES.tabletAndSmaller} {
-    font-size: ${15 / 16}rem;
+    font-size: ${FONTSIZE.item.tablet};
   }
   @media ${QUERIES.phoneAndSmaller} {
-    font-size: ${13 / 16}rem;
+    font-size: ${FONTSIZE.item.phone};
   }
 `;
 

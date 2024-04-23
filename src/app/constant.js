@@ -33,6 +33,7 @@ export const FONTFAMILY = {
 export const FONTWEIGHT = {
   tier1: "180",
   tier2: "200",
+  tier25: "250",
   tier3: "300",
   normal: "400",
   bold: "700",
