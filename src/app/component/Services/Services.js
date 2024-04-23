@@ -1,10 +1,10 @@
-import { Content } from "next/font/google";
 import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import logo2 from "/public/logo2.svg";
 import logo3 from "/public/logo3.svg";
 import logo4 from "/public/logo4.svg";
+import { QUERIES } from "@/app/constant";
 
 const services = [
   { description: "réparation toutes marques", icon: logo2 },
@@ -16,15 +16,18 @@ export default function Services() {
   function ServicesItem({ description, icon }) {
     return (
       <ItemWrapper>
-        <Image
-          alt="logo decoration"
-          src={icon}
-          quality={100}
-          style={{
-            width: "200px",
-            height: "200px",
-          }}
-        />
+        <ResponsiveItemWrapper>
+          <Image
+            alt="logo decoration"
+            src={icon}
+            quality={100}
+            layout="responsive"
+            style={{
+              width: "200px",
+              height: "200px",
+            }}
+          />
+        </ResponsiveItemWrapper>
         <Item>{description}</Item>
       </ItemWrapper>
     );
@@ -41,20 +44,47 @@ export default function Services() {
 
 const Wrapper = styled.div`
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-evenly;
   width: 100%;
   height: 100vh;
-  padding: 150px;
   background: hsla(0, 0%, 0%, 0.2);
+
+  @media ${QUERIES.tabletAndSmaller} {
+    height: 60vh;
+  }
+  @media ${QUERIES.phoneAndSmaller} {
+    height: 30vh;
+  }
 `;
+
 const ItemWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+`;
+
+const ResponsiveItemWrapper = styled.div`
+  width: 200px;
+  height: 200px;
+
+  @media ${QUERIES.tabletAndSmaller} {
+    width: 150px;
+    height: 150px;
+  }
+  @media ${QUERIES.phoneAndSmaller} {
+    width: 60px;
+    height: 60px;
+  }
+`;
+
+const Item = styled.p`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`;
-const Item = styled.p`
+
   width: 60%;
   text-transformation: uppercase;
   text-transform: uppercase;
@@ -63,4 +93,11 @@ const Item = styled.p`
   text-align: center;
   font-size: ${18 / 16}rem;
   font-weight: 200;
+
+  @media ${QUERIES.tabletAndSmaller} {
+    font-size: ${16 / 16}rem;
+  }
+  @media ${QUERIES.phoneAndSmaller} {
+    font-size: ${10 / 16}rem;
+  }
 `;
