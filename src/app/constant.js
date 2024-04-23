@@ -1,6 +1,7 @@
 export const COLORS = {
   background: {
     darkGray: "hsl(0 1 18)",
+    transparentGray: "hsla(0, 4%, 68%, 0.9)",
   },
   primary: "hsl(0 100 27)",
 };

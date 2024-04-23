@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Decoration from "../Decoration/Decoration";
+import { QUERIES, COLORS } from "@/app/constant";
 
 function DecorativeWrapper({
   title,
@@ -33,8 +34,15 @@ const Background = styled.div`
   padding-inline: 64px;
   width: 100%;
   height: auto;
-  background: hsla(0, 4%, 68%, 0.9);
+  background: ${COLORS.background.transparentGray};
   margin-top: var(--margin-top);
+
+  @media ${QUERIES.tabletAndSmaller} {
+    padding: 68px 0;
+  }
+  @media ${QUERIES.phoneAndSmaller} {
+    padding: 36px 0;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -46,6 +54,13 @@ const Wrapper = styled.div`
   gap: 22px;
   width: 50%;
   background: white;
+
+  @media ${QUERIES.tabletAndSmaller} {
+    width: 60%;
+  }
+  @media ${QUERIES.phoneAndSmaller} {
+    width: 90%;
+  }
 `;
 
 const Title = styled.h1`
@@ -62,6 +77,13 @@ const Content = styled.p`
   font-weight: 180;
   font-size: ${15 / 16}rem;
   color: black;
+
+  @media ${QUERIES.tabletAndSmaller} {
+    font-size: ${15 / 16}rem;
+  }
+  @media ${QUERIES.phoneAndSmaller} {
+    font-size: ${13 / 16}rem;
+  }
 `;
 
 export default DecorativeWrapper;
