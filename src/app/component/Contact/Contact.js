@@ -16,10 +16,11 @@ export default function Contact() {
       <br />
       <br />
       <br /> HEURES D'OUVERTURE: <br />
-      <br /> <StrongWeekday>Lundi :</StrongWeekday> 9h-12h15 14h-19h <br />
-      <br /> <StrongWeekday>Mardi- Jeudi:</StrongWeekday> 8h - 12h15 14h- 19h{" "}
+      <br /> <StrongWeekday>Lundi :</StrongWeekday> 9h-12h15 14h-19h
       <br />
-      <br /> <StrongWeekday>Vendredi :</StrongWeekday> 8h - 12h15 14h - 18h{" "}
+      <br /> <StrongWeekday>Mardi- Jeudi:</StrongWeekday> 8h - 12h15 14h- 19h
+      <br />
+      <br /> <StrongWeekday>Vendredi :</StrongWeekday> 8h - 12h15 14h - 18h
       <br />
       <br />
       <StrongWeekday>Samedi :</StrongWeekday> UNIQUEMENT sur rendez-vous
