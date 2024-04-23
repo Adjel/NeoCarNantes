@@ -6,6 +6,19 @@ export const COLORS = {
   primary: "hsl(0 100 27)",
 };
 
+export const FONTSIZE = {
+  title: {
+    desktop: `${34 / 16}rem`,
+    tablet: `${34 / 16}rem`,
+    phone: `${28 / 16}rem`,
+  },
+  content: {
+    desktop: `${24 / 16}rem`,
+    tablet: `${24 / 16}rem`,
+    phone: `${16 / 16}rem`,
+  },
+};
+
 // Desktop is the basic display, so it's display by default and be
 // hidden if we are on other device size type
 

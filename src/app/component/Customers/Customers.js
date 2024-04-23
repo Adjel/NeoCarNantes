@@ -10,6 +10,7 @@ import photo7 from "/public/customers/photo7.jpeg";
 import photo8 from "/public/customers/photo8.jpeg";
 import photo9 from "/public/customers/photo9.jpeg";
 import CustomerItem from "../CustomerItem/CustomerItem";
+import { QUERIES, FONTSIZE } from "@/app/constant";
 
 const images = [
   photo1,
@@ -45,6 +46,13 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   margin-top: 64px;
+
+  @media ${QUERIES.tabletAndSmaller} {
+    margin-top: 48px;
+  }
+  @media ${QUERIES.phoneAndSmaller} {
+    margin-top: 32px;
+  }
 `;
 
 const Grid = styled.div`
@@ -55,22 +63,37 @@ const Grid = styled.div`
   justify-content: center;
   align-content: center;
   padding: 64px;
+
+  @media ${QUERIES.tabletAndSmaller} {
+    padding: 48px 0;
+  }
+  @media ${QUERIES.phoneAndSmaller} {
+    padding: 32px 0;
+  }
 `;
 const Title = styled.div`
   color: white;
   letter-spacing: 0.1em;
-  font-size: ${34 / 16}rem;
+  font-size: ${FONTSIZE.title.desktop};
   line-height: normal;
   text-align: center;
   text-transform: uppercase;
   font-family: "Fjalla One";
+
+  @media ${QUERIES.phoneAndSmaller} {
+    font-size: ${FONTSIZE.title.phone};
+  }
 `;
 
 const Content = styled.p`
   color: white;
-  font-size: ${24 / 16}rem;
-  font-weight: normal;
+  font-size: ${FONTSIZE.content.desktop};
   font-weight: 200;
+
+  @media ${QUERIES.phoneAndSmaller} {
+    color: white;
+    font-size: ${FONTSIZE.content.phone};
+  }
 `;
 
 export default Customers;
