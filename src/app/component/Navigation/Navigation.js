@@ -67,6 +67,11 @@ const Nav = styled.div`
   width: auto;
   height: auto;
   background: inherit;
+
+  @media ${QUERIES.tabletAndSmaller} {
+    justify-content: center;
+    gap: 42px;
+  }
 `;
 
 export default Navigation;

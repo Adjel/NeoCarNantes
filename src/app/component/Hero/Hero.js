@@ -2,6 +2,7 @@
 import React from "react";
 import styled from "styled-components";
 import HeroLogo from "../HeroLogo/HeroLogo";
+import { QUERIES } from "@/app/constant";
 
 function Hero() {
   return (
@@ -35,6 +36,22 @@ const BrandWrapper = styled.div`
   height: 100vh;
   color: white;
   background: transparent;
+
+  * > {
+    @media ${QUERIES.tabletAndSmaller} {
+      line-height: 2em;
+    }
+    @media ${QUERIES.phoneAndSmaller} {
+      line-height: 1.2em;
+    }
+  }
+
+  @media ${QUERIES.tabletAndSmaller} {
+    height: 60vh;
+  }
+  @media ${QUERIES.phoneAndSmaller} {
+    height: 40vh;
+  }
 `;
 
 const Brand = styled.h1`
@@ -52,6 +69,10 @@ const BrandContent = styled.p`
   text-align: center;
   font-weight: 200;
   letter-spacing: 0.2em;
+
+  @media ${QUERIES.tabletAndSmaller} {
+    line-height: 2em;
+  }
 `;
 
 export default Hero;
