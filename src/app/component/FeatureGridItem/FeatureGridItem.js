@@ -1,7 +1,7 @@
 import React from "react";
 import Decoration from "../Decoration/Decoration";
 import styled from "styled-components";
-import { COLORS, FONTSIZE, QUERIES } from "@/app/constant";
+import { COLORS, FONTSIZE, FONTWEIGHT, QUERIES } from "@/app/constant";
 
 export default function FeatureGridItem({
   title,
@@ -37,6 +37,7 @@ const Wrapper = styled.div`
     min-height: fit-content;
   }
   @media ${QUERIES.tabletAndSmaller} {
+    gap: 16px;
     padding: 8px 8px;
   }
 `;
@@ -48,7 +49,7 @@ const FeatureTitle = styled.p`
 const FeatureContent = styled.p`
   flex: 1;
   text-align: center;
-  font-weight: 300;
+  font-weight: ${FONTWEIGHT.tier3};
   font-style: normal;
   line-height: normal;
   letter-spacing: 0.1em;

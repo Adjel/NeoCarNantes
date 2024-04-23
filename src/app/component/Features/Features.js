@@ -1,7 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import FeatureGridItem from "../FeatureGridItem/FeatureGridItem";
-import { COLORS, FONTSIZE, FONTWEIGHT, QUERIES } from "@/app/constant";
+import {
+  COLORS,
+  FONTFAMILY,
+  FONTSIZE,
+  FONTWEIGHT,
+  QUERIES,
+} from "@/app/constant";
 
 const featuresData = [
   { title: "PRESTATIONS TOUTES MARQUES", feature: "Sur Devis" },
@@ -100,7 +106,7 @@ const Title = styled.div`
   font-weight: ${FONTWEIGHT.tier1};
   line-height: normal;
   text-align: center;
-  font-family: "Fjalla One";
+  font-family: ${FONTFAMILY.Fjalla};
 
   @media ${QUERIES.tabletAndSmaller} {
     font-size: ${FONTSIZE.title.tablet};

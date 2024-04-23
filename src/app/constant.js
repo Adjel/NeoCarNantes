@@ -26,9 +26,14 @@ export const FONTSIZE = {
   },
 };
 
+export const FONTFAMILY = {
+  Fjalla: "Fjalla One",
+};
+
 export const FONTWEIGHT = {
   tier1: "180",
   tier2: "200",
+  tier3: "300",
   normal: "400",
   bold: "700",
 };
