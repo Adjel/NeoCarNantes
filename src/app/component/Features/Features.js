@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import FeatureGridItem from "../FeatureGridItem/FeatureGridItem";
+import { COLORS, FONTSIZE, FONTWEIGHT, QUERIES } from "@/app/constant";
 
 const featuresData = [
   { title: "PRESTATIONS TOUTES MARQUES", feature: "Sur Devis" },
@@ -88,24 +89,37 @@ const Wrapper = styled.div`
   width: 100%;
   padding-top: 80px;
   gap: 10px;
-  background: hsla(0, 0%, 0%, 0.7);
+  background: ${COLORS.background.transparentDarkGray};
 `;
 const Title = styled.div`
   color: white;
   letter-spacing: 0.1em;
   font-family: din-next-w01-light, din-next-w02-light, din-next-w10-light,
     sans-serif;
-  font-size: ${34 / 16}rem;
-  font-weight: 180;
+  font-size: ${FONTSIZE.title.desktop};
+  font-weight: ${FONTWEIGHT.tier1};
   line-height: normal;
   text-align: center;
   font-family: "Fjalla One";
+
+  @media ${QUERIES.tabletAndSmaller} {
+    font-size: ${FONTSIZE.title.tablet};
+  }
+  @media ${QUERIES.phoneAndSmaller} {
+    font-size: ${FONTSIZE.title.phone};
+  }
 `;
 const SubTitle = styled.div`
   color: white;
-  font-size: ${24 / 16}rem;
-  font-weight: bold;
-  font-weight: 200;
+  font-size: ${FONTSIZE.content.desktop};
+  font-weight: ${FONTWEIGHT.tier2};
+
+  @media ${QUERIES.tabletAndSmaller} {
+    font-size: ${FONTSIZE.content.tablet};
+  }
+  @media ${QUERIES.phoneAndSmaller} {
+    font-size: ${FONTSIZE.content.phone};
+  }
 `;
 
 const FlexWrapper = styled.div`
@@ -115,4 +129,12 @@ const FlexWrapper = styled.div`
   justify-content: center;
   gap: 15px;
   margin: 36px;
+
+  @media ${QUERIES.tabletAndSmaller} {
+    width: 85%;
+  }
+  @media ${QUERIES.phoneAndSmaller} {
+    display: grid;
+    gap: 15px;
+  }
 `;
