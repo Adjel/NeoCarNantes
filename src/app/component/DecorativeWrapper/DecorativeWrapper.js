@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Decoration from "../Decoration/Decoration";
+import { QUERIES, COLORS, FONTSIZE, FONTWEIGHT } from "@/app/constant";
 
 function DecorativeWrapper({
   title,
@@ -11,7 +12,7 @@ function DecorativeWrapper({
 }) {
   return (
     <Background style={{ "--margin-top": marginTop }}>
-      <Wrapper>
+      <WhiteWrapper>
         <Title>{title}</Title>
         <Decoration backgroundColor="black" />
         <Content
@@ -19,7 +20,7 @@ function DecorativeWrapper({
         >
           {children}
         </Content>
-      </Wrapper>
+      </WhiteWrapper>
     </Background>
   );
 }
@@ -33,11 +34,18 @@ const Background = styled.div`
   padding-inline: 64px;
   width: 100%;
   height: auto;
-  background: hsla(0, 4%, 68%, 0.9);
+  background: ${COLORS.background.transparentGray};
   margin-top: var(--margin-top);
+
+  @media ${QUERIES.tabletAndSmaller} {
+    padding: 68px 0;
+  }
+  @media ${QUERIES.phoneAndSmaller} {
+    padding: 36px 0;
+  }
 `;
 
-const Wrapper = styled.div`
+const WhiteWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,12 +54,27 @@ const Wrapper = styled.div`
   gap: 22px;
   width: 50%;
   background: white;
+
+  @media ${QUERIES.tabletAndSmaller} {
+    width: 60%;
+  }
+  @media ${QUERIES.phoneAndSmaller} {
+    width: 90%;
+  }
 `;
 
 const Title = styled.h1`
-  color: hsl(0 100 27);
-  font-weight: 250;
+  color: ${COLORS.primary};
+  font-weight: ${FONTWEIGHT.tier25};
   text-transform: uppercase;
+  font-size: ${FONTSIZE.title.desktop};
+
+  @media ${QUERIES.tabletAndSmaller} {
+    font-size: ${FONTSIZE.title.tablet};
+  }
+  @media ${QUERIES.phoneAndSmaller} {
+    font-size: ${FONTSIZE.title.phone};
+  }
 `;
 
 const Content = styled.p`
@@ -59,9 +82,16 @@ const Content = styled.p`
   height: auto;
   text-align: var(--text-align);
   padding-left: var(--padding-start);
-  font-weight: 180;
-  font-size: ${15 / 16}rem;
+  font-weight: ${FONTWEIGHT.tier1};
+  font-size: ${FONTSIZE.item.desktop};
   color: black;
+
+  @media ${QUERIES.tabletAndSmaller} {
+    font-size: ${FONTSIZE.item.tablet};
+  }
+  @media ${QUERIES.phoneAndSmaller} {
+    font-size: ${FONTSIZE.item.phone};
+  }
 `;
 
 export default DecorativeWrapper;

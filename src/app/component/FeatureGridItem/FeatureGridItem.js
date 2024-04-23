@@ -1,6 +1,7 @@
 import React from "react";
 import Decoration from "../Decoration/Decoration";
 import styled from "styled-components";
+import { COLORS, FONTSIZE, FONTWEIGHT, QUERIES } from "@/app/constant";
 
 export default function FeatureGridItem({
   title,
@@ -27,19 +28,30 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 26px;
-  background: hsla(0, 4%, 70%, 0.55);
   padding: 25px 8px;
+  background: ${COLORS.background.transparentLightGray};
+
+  @media ${QUERIES.tabletAndSmaller} {
+    flex: 0;
+    min-width: fit-content;
+    min-height: fit-content;
+  }
+  @media ${QUERIES.tabletAndSmaller} {
+    gap: 16px;
+    padding: 8px 8px;
+  }
 `;
 const FeatureTitle = styled.p`
   flex: 1;
   text-align: center;
+  font-size: ${FONTSIZE.item.desktop};
 `;
 const FeatureContent = styled.p`
   flex: 1;
   text-align: center;
-  font-weight: 300;
+  font-weight: ${FONTWEIGHT.tier3};
   font-style: normal;
   line-height: normal;
   letter-spacing: 0.1em;
-  font-size: ${14 / 16}rem;
+  font-size: ${FONTSIZE.item.desktop};
 `;

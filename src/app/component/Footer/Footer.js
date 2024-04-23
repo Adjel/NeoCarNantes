@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import InstagramIcon from "../InstagramIcon/InstagramIcon";
 import RateStarsComponent from "../RateStarsComponent/RateStarsComponent";
+import { COLORS, FONTSIZE, FONTWEIGHT, QUERIES } from "@/app/constant";
 
 export default function Footer() {
   return (
@@ -36,7 +37,15 @@ const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   min-height: 324px;
-  background: hsl(0 1 18);
+  background: ${COLORS.background.darkGray};
+
+  @media ${QUERIES.tabletAndSmaller} {
+    min-height: 224px;
+  }
+
+  @media ${QUERIES.phoneAndSmaller} {
+    min-height: 146px;
+  }
 `;
 
 const MainWrapper = styled.div`
@@ -46,6 +55,15 @@ const MainWrapper = styled.div`
   width: 100%;
   gap: 50px;
   margin: 48px 0px;
+
+  @media ${QUERIES.tabletAndSmaller} {
+    gap: 30px;
+    margin: 0px 0px;
+  }
+  @media ${QUERIES.phoneAndSmaller} {
+    gap: 10px;
+    margin: 0px 0px;
+  }
 `;
 
 const BasicWrapper = styled.div`
@@ -57,9 +75,16 @@ const BasicWrapper = styled.div`
   height: 80px;
 
   > p {
-    font-size: ${12 / 16}rem;
-    font-weight: 170;
+    font-size: ${FONTSIZE.little.desktop};
+    font-weight: ${FONTWEIGHT.tier1};
     text-align: center;
+
+    @media ${QUERIES.tabletAndSmaller} {
+      font-size: ${FONTSIZE.little.tablet};
+    }
+    @media ${QUERIES.phoneAndSmaller} {
+      font-size: ${FONTSIZE.little.phone};
+    }
   }
 `;
 

@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import NavLink from "../NavLink/NavLink";
+import { QUERIES, BREAKPOINTS } from "@/app/constant";
 
 const links = [
   { name: "acceuil", link: "hero" },
@@ -66,6 +67,11 @@ const Nav = styled.div`
   width: auto;
   height: auto;
   background: inherit;
+
+  @media ${QUERIES.tabletAndSmaller} {
+    justify-content: center;
+    gap: 42px;
+  }
 `;
 
 export default Navigation;

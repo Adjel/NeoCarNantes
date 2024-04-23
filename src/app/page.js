@@ -10,7 +10,7 @@ import BrandStory from "./component/BrandStory/BrandStory";
 import Services from "./component/Services/Services";
 
 export default function Home() {
-  // Hero has two section in inside
+  // Hero has two section inside
   return (
     <Wrapper>
       <ScrollWrapper>

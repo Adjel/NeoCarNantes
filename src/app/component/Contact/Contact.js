@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import DecorativeWrapper from "../DecorativeWrapper/DecorativeWrapper";
+import { FONTWEIGHT } from "@/app/constant";
 
 export default function Contact() {
   return (
     <DecorativeWrapper
       title={"nous contacter"}
-      textAlign={"start"}
-      paddingStart={"126px"}
+      textAlign={"center"}
       marginTop="50px"
     >
       10 Impasse de Belgique 44300 NANTES <br />
@@ -31,5 +31,5 @@ export default function Contact() {
 }
 
 const StrongWeekday = styled.span`
-  font-weight: 400;
+  font-weight: ${FONTWEIGHT.normal};
 `;

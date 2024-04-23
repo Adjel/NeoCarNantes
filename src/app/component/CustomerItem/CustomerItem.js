@@ -4,12 +4,13 @@ import styled from "styled-components";
 import FadeInElement from "../FadeInElement/FadeInElement";
 import LikeIconButton from "../LikeIconButton";
 import ShareIconButton from "../ShareIconButton";
+import { QUERIES } from "@/app/constant";
 
 export default function CustomerItem({ alt, src }) {
   return (
     <FadeInElement position={"relative"}>
       <HoverWrapper>
-        <CustomerPhoto alt={alt} src={src} responsive />
+        <CustomerPhoto alt={alt} src={src} layout="responsive" />
         <ButtonsWrapper>
           <LikeIconButton />
           <ShareIconButton />
