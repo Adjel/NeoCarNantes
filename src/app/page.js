@@ -6,23 +6,32 @@ import Features from "./component/Features/Features";
 import Customers from "./component/Customers/Customers";
 import Contact from "./component/Contact/Contact";
 import Footer from "./component/Footer/Footer";
+import BrandStory from "./component/BrandStory/BrandStory";
+import Services from "./component/Services/Services";
 
 export default function Home() {
+  // Hero has two section in inside
   return (
     <Wrapper>
       <ScrollWrapper>
         <section id="hero">
           <Hero />
         </section>
+        <LargeSection id="services">
+          <Services />
+        </LargeSection>
+        <LargeSection id="story">
+          <BrandStory />
+        </LargeSection>
         <section id="features">
           <Features />
         </section>
         <section id="customers">
           <Customers />
         </section>
-        <section id="contact" style={{ width: "100%" }}>
+        <LargeSection id="contact">
           <Contact />
-        </section>
+        </LargeSection>
         <Footer />
       </ScrollWrapper>
       <HeaderWrapper>
@@ -58,4 +67,8 @@ const ScrollWrapper = styled.div`
   width: 100%;
   overflow-y: auto;
   padding-top: 36px;
+`;
+
+const LargeSection = styled.section`
+  width: 100%;
 `;

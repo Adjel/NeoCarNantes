@@ -41,9 +41,12 @@ export default function Services() {
 
 const Wrapper = styled.div`
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  width: 70%;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100vh;
+  padding: 150px;
+  background: hsla(0, 0%, 0%, 0.2);
 `;
 const ItemWrapper = styled.div`
   display: flex;

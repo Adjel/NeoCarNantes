@@ -2,8 +2,6 @@
 import React from "react";
 import styled from "styled-components";
 import HeroLogo from "../HeroLogo/HeroLogo";
-import BrandStory from "../BrandStory/BrandStory";
-import Services from "../Services/Services";
 
 function Hero() {
   return (
@@ -13,10 +11,6 @@ function Hero() {
         <Brand>NEOCARNANTES</Brand>
         <BrandContent>Atelier de Réparation Automobile</BrandContent>
       </BrandWrapper>
-      <Section id="services">
-        <Services />
-      </Section>
-      <BrandStory />
     </Wrapper>
   );
 }
@@ -50,15 +44,6 @@ const Brand = styled.h1`
   font-size: ${64 / 16}rem;
   font-weight: 400;
   font-family: "Pathway Gothic One", sans-serif;
-`;
-
-const Section = styled.section`
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-  padding: 100px;
-  background: hsla(0, 0%, 0%, 0.2);
 `;
 
 const BrandContent = styled.p`

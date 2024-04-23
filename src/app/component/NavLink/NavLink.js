@@ -5,6 +5,8 @@ import styled from "styled-components";
 function NavLink({ children, link, isActive }) {
   let color = isActive ? "black" : "hsl(0 100 27)";
   let display = isActive ? "revert" : "none";
+  console.log({ isActive });
+  console.log({ link });
 
   return (
     <Wrapper href={link}>
