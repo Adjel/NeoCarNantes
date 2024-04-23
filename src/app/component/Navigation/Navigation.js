@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import NavLink from "../NavLink/NavLink";
+import { QUERIES, BREAKPOINTS } from "@/app/constant";
 
 const links = [
   { name: "acceuil", link: "hero" },

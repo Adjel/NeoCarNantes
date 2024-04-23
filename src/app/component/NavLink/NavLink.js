@@ -1,9 +1,10 @@
 "use client";
 import React from "react";
 import styled from "styled-components";
+import { COLORS } from "@/app/constant";
 
 function NavLink({ children, link, isActive }) {
-  let color = isActive ? "black" : "hsl(0 100 27)";
+  let color = isActive ? "black" : COLORS.primary;
   let display = isActive ? "revert" : "none";
   console.log({ isActive });
   console.log({ link });
