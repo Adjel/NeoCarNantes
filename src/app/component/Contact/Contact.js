@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import DecorativeWrapper from "../DecorativeWrapper/DecorativeWrapper";
 import { FONTSIZE, FONTWEIGHT, QUERIES } from "@/app/constant";
-import illustration from "../../../../../images/old_car_logo.jpeg";
+import illustration from "/public/old_car_logo.jpeg";
 import Image from "next/image";
 
 export default function Contact() {
