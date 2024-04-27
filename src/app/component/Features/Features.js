@@ -142,7 +142,11 @@ const FlexWrapper = styled.article`
 
   @media ${QUERIES.tabletAndSmaller} {
     width: 85%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: ${15 / 16}rem;
   }
+
   @media ${QUERIES.phoneAndSmaller} {
     display: grid;
     gap: ${15 / 16}rem;
