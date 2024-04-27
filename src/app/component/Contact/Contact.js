@@ -9,22 +9,22 @@ export default function Contact() {
   return (
     <DecorativeWrapper
       decorativeImage={
-        <picture>
+        <ImageWrapper>
           <Image
             alt={"an image of an old cool car"}
             src={illustration}
             quality={100}
             layout="responsive"
             style={{
-              width: `${70 / 16}rem`,
-              height: `${70 / 16}rem`,
+              width: `${500 / 16}rem`,
+              height: `${500 / 16}rem`,
             }}
           />
-        </picture>
+        </ImageWrapper>
       }
       title={"nous contacter"}
       textAlign={"center"}
-      marginTop="50px"
+      marginTop={`${50 / 16}rem`}
     >
       <ContactWrapper>
         <Adress>10 Impasse de Belgique 44300 NANTES </Adress>
@@ -90,4 +90,9 @@ font-style: normal;
 
 const StrongWeekday = styled.span`
   font-weight: ${FONTWEIGHT.normal};
+`;
+
+const ImageWrapper = styled.picture`
+  width: ${290 / 16}rem;
+  height: ${290 / 16}rem;
 `;

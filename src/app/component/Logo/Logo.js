@@ -14,8 +14,8 @@ function Logo() {
         quality={100}
         layout="responsive"
         style={{
-          width: "100px",
-          height: "100px",
+          width: `${100 / 16}rem`,
+          height: `${100 / 16}rem`,
         }}
       />
     </ResponsiveLogoWrapper>
@@ -26,14 +26,14 @@ const ResponsiveLogoWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90px;
+  width: ${90 / 16}rem;
 
   @media ${QUERIES.tabletAndSmaller} {
-    width: 80px;
+    width: ${80 / 16}rem;
   }
 
   @media ${QUERIES.phoneAndSmaller} {
-    width: 70px;
+    width: ${70 / 16}rem;
   }
 `;
 export default Logo;

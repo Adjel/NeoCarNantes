@@ -23,8 +23,8 @@ export default function Services() {
             quality={100}
             layout="responsive"
             style={{
-              width: "200px",
-              height: "200px",
+              width: `${200 / 16}rem`,
+              height: `${200 / 16}rem`,
             }}
           />
         </ResponsiveItemWrapper>
@@ -68,16 +68,16 @@ const ItemWrapper = styled.div`
 `;
 
 const ResponsiveItemWrapper = styled.div`
-  width: 200px;
-  height: 200px;
+  width: ${200 / 16}rem;
+  height: ${200 / 16}rem;
 
   @media ${QUERIES.tabletAndSmaller} {
-    width: 150px;
-    height: 150px;
+    width: ${150 / 16}rem;
+    height: ${150 / 16}rem;
   }
   @media ${QUERIES.phoneAndSmaller} {
-    width: 60px;
-    height: 60px;
+    width: ${60 / 16}rem;
+    height: ${60 / 16}rem;
   }
 `;
 

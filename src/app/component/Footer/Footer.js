@@ -36,15 +36,15 @@ const Wrapper = styled.div`
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  min-height: 324px;
+  min-height: ${324 / 16}rem;
   background: ${COLORS.background.darkGray};
 
   @media ${QUERIES.tabletAndSmaller} {
-    min-height: 224px;
+    min-height: ${224 / 16}rem;
   }
 
   @media ${QUERIES.phoneAndSmaller} {
-    min-height: 146px;
+    min-height: ${146 / 16}rem;
   }
 `;
 
@@ -53,16 +53,16 @@ const MainWrapper = styled.div`
   justify-content: space-evenly;
   align-items: baseline;
   width: 100%;
-  gap: 50px;
-  margin: 48px 0px;
+  gap: ${50 / 16}rem;
+  margin: ${48 / 16}rem 0rem;
 
   @media ${QUERIES.tabletAndSmaller} {
-    gap: 30px;
-    margin: 0px 0px;
+    gap: ${30 / 16}rem;
+    margin: 0rem 0rem;
   }
   @media ${QUERIES.phoneAndSmaller} {
-    gap: 10px;
-    margin: 0px 0px;
+    gap: ${10 / 16}rem;
+    margin: 0rem 0rem;
   }
 `;
 
@@ -71,8 +71,8 @@ const BasicWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: 2px;
-  height: 80px;
+  gap: ${2 / 16}rem;
+  height: ${80 / 16}rem;
 
   > p {
     font-size: ${FONTSIZE.little.desktop};

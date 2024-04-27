@@ -22,8 +22,8 @@ export default function CustomerItem({ alt, src }) {
 
 const CustomerPhoto = styled(Image)`
   object-fit: cover;
-  width: 430px;
-  height: 300px;
+  width: ${400 / 16}rem;
+  height: ${300 / 16}rem;
 `;
 
 const ButtonsWrapper = styled.div`
@@ -36,7 +36,7 @@ const ButtonsWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 0 24px 28px;
+  padding: 0 ${24 / 16}rem ${28 / 16}rem;
   opacity: 0;
 `;
 

@@ -15,12 +15,16 @@ export default function RateStarsComponent() {
 const Wrapper = styled.div``;
 
 const Star = styled(FaRegStar)`
-  width: 30px;
-  height: 30px;
+  width: ${30 / 16}rem;
+  height: ${30 / 16}rem;
   color: ${COLORS.blue};
 
+  @media ${QUERIES.tabletAndSmaller} {
+    width: ${24 / 16}rem;
+    height: ${24 / 16}rem;
+  }
   @media ${QUERIES.phoneAndSmaller} {
-    width: 18px;
-    height: 18px;
+    width: ${18 / 16}rem;
+    height: ${18 / 16}rem;
   }
 `;
