@@ -47,55 +47,51 @@ const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
-  margin-top: ${64 / 16}rem;
+  margin-top: ${32 / 16}rem;
 
-  @media ${QUERIES.tabletAndSmaller} {
+  @media ${QUERIES.tabletAndUp} {
     margin-top: ${48 / 16}rem;
   }
-  @media ${QUERIES.phoneAndSmaller} {
-    margin-top: ${32 / 16}rem;
+  @media ${QUERIES.desktopAndUp} {
+    margin-top: ${64 / 16}rem;
   }
 `;
 
 const Grid = styled.section`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  justify-items: center;
-  justify-content: center;
-  align-content: center;
-  padding: ${64 / 16}rem;
+  padding: ${28 / 16}rem;
 
-  @media ${QUERIES.tabletAndSmaller} {
-    padding: ${48 / 16} rem ${30 / 16}rem;
+  @media ${QUERIES.tabletAndUp} {
+    padding: ${48 / 16}rem ${35 / 16}rem;
   }
-  @media ${QUERIES.phoneAndSmaller} {
-    padding: ${32 / 16} rem ${10 / 16}rem;
+  @media ${QUERIES.laptopAndUp} {
+    padding: ${64 / 16}rem;
   }
 `;
+
 const Title = styled.h1`
   color: white;
   letter-spacing: 0.1em;
-  font-size: ${FONTSIZE.title.desktop};
+  font-size: ${FONTSIZE.title.phone};
   line-height: normal;
   text-align: center;
   text-transform: uppercase;
   font-family: "Fjalla One";
   font-weight: ${FONTWEIGHT.normal};
 
-  @media ${QUERIES.phoneAndSmaller} {
-    font-size: ${FONTSIZE.title.phone};
+  @media ${QUERIES.laptopAndUp} {
+    font-size: ${FONTSIZE.title.desktop};
   }
 `;
 
 const Content = styled.h2`
   color: white;
-  font-size: ${FONTSIZE.content.desktop};
+  font-size: ${FONTSIZE.content.phone};
   font-weight: ${FONTWEIGHT.tier2};
 
-  @media ${QUERIES.phoneAndSmaller} {
-    color: white;
-    font-size: ${FONTSIZE.content.phone};
+  @media ${QUERIES.laptopAndUp} {
+    font-size: ${FONTSIZE.content.desktop};
   }
 `;
 

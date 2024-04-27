@@ -27,69 +27,55 @@ export default function Contact() {
       marginTop={`${50 / 16}rem`}
     >
       <ContactWrapper>
-        <Adress>10 Impasse de Belgique 44300 NANTES </Adress>
-        <Adress>06.11.11.70.44</Adress>
-        <Parag> Instagram : neocarnantes </Parag>
-        <Parag> HEURES D&apos;OUVERTURE:</Parag>
-        <Parag>
+        <adress>10 Impasse de Belgique 44300 NANTES </adress>
+        <adress>06.11.11.70.44</adress>
+        <p> Instagram : neocarnantes </p>
+        <p> HEURES D&apos;OUVERTURE:</p>
+        <p>
           <StrongWeekday>Lundi :</StrongWeekday> 9h-12h15 14h-19h
-        </Parag>
-        <Parag>
+        </p>
+        <p>
           <StrongWeekday>Mardi- Jeudi:</StrongWeekday> 8h - 12h15 14h- 19h
-        </Parag>
-        <Parag>
+        </p>
+        <p>
           <StrongWeekday>Vendredi :</StrongWeekday> 8h - 12h15 14h - 18h
-        </Parag>
-        <Parag>
+        </p>
+        <p>
           <StrongWeekday>Samedi :</StrongWeekday> UNIQUEMENT sur rendez-vous
           (secrétariat fermé)
-        </Parag>
+        </p>
       </ContactWrapper>
     </DecorativeWrapper>
   );
 }
 
+const StrongWeekday = styled.span`
+  font-weight: ${FONTWEIGHT.normal};
+`;
+
 const ContactWrapper = styled.section`
   display: flex;
   flex-direction: column;
   gap: ${18 / 16}rem;
-`;
 
-const Parag = styled.p`
-  font-weight: ${FONTWEIGHT.tier1};
-  font-size: ${FONTSIZE.item.desktop};
-  color: black;
+  > p,
+  adress {
+    p > ${StrongWeekday} {
+      font-weight: inherit;
+      font-style: inherit;
+    }
 
-  @media ${QUERIES.tabletAndSmaller} {
-    font-size: ${FONTSIZE.item.tablet};
-  }
-  @media ${QUERIES.phoneAndSmaller} {
+    font-weight: ${FONTWEIGHT.tier1};
     font-size: ${FONTSIZE.item.phone};
+    color: black;
+
+    @media ${QUERIES.tabletAndUp} {
+      font-size: ${FONTSIZE.item.tablet};
+    }
+    @media ${QUERIES.laptopAndUp} {
+      font-size: ${FONTSIZE.item.desktop};
+    }
   }
-
-  > * {
-    font-weight: inherit;
-    font-style: inherit;
-  }
-}
-`;
-
-const Adress = styled.address`  color: black;
-font-weight: ${FONTWEIGHT.tier1};
-font-size: ${FONTSIZE.item.desktop};
-color: black;
-font-style: normal;
-
-@media ${QUERIES.tabletAndSmaller} {
-  font-size: ${FONTSIZE.item.tablet};
-}
-@media ${QUERIES.phoneAndSmaller} {
-  font-size: ${FONTSIZE.item.phone};
-}
-}`;
-
-const StrongWeekday = styled.span`
-  font-weight: ${FONTWEIGHT.normal};
 `;
 
 const ImageWrapper = styled.picture`

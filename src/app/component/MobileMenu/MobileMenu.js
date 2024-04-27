@@ -19,13 +19,12 @@ export default function MobileMenu({ links }) {
 const Wrapper = styled.div``;
 
 const Button = styled.button`
-  display: none;
   width: fit-content;
   background: none;
   border: none;
 
-  @media ${QUERIES.tabletAndSmaller} {
-    display: revert;
+  @media ${QUERIES.tabletAndUp} {
+    display: none;
   }
 `;
 

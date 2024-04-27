@@ -62,18 +62,18 @@ export const FONTWEIGHT = {
   bold: "700",
 };
 
-// Desktop is the basic display, so it's display by default and be
+// Mobile is the basic display, so it's display by default and be
 // hidden if we are on other device size type
 
 // Reverse for others
 export const BREAKPOINTS = {
-  phoneMax: 550,
-  tabletMax: 1100,
-  laptopMax: 1500,
+  tabletMin: 550,
+  laptopMin: 1100,
+  desktopMin: 1500,
 };
 
 export const QUERIES = {
-  laptopAndSmaller: `(max-width: ${BREAKPOINTS.laptopMax / 16}rem)`,
-  tabletAndSmaller: `(max-width: ${BREAKPOINTS.tabletMax / 16}rem)`,
-  phoneAndSmaller: `(max-width: ${BREAKPOINTS.phoneMax / 16}rem)`,
+  tabletAndUp: `(min-width: ${BREAKPOINTS.tabletMin / 16}rem)`,
+  laptopAndUp: `(min-width: ${BREAKPOINTS.laptopMin / 16}rem)`,
+  desktopAndUp: `(min-width: ${BREAKPOINTS.desktopMin / 16}rem)`,
 };

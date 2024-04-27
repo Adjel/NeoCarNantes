@@ -49,14 +49,14 @@ const Wrapper = styled.article`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 30vh;
   background: ${COLORS.background.transparentLightBlack};
 
-  @media ${QUERIES.tabletAndSmaller} {
+  @media ${QUERIES.tabletAndUp} {
     height: 70vh;
   }
-  @media ${QUERIES.phoneAndSmaller} {
-    height: 30vh;
+  @media ${QUERIES.laptopAndUp} {
+    height: 100vh;
   }
 `;
 
@@ -68,16 +68,16 @@ const ItemWrapper = styled.div`
 `;
 
 const ResponsiveItemWrapper = styled.div`
-  width: ${200 / 16}rem;
-  height: ${200 / 16}rem;
+  width: ${60 / 16}rem;
+  height: ${60 / 16}rem;
 
-  @media ${QUERIES.tabletAndSmaller} {
+  @media ${QUERIES.tabletAndUp} {
     width: ${150 / 16}rem;
     height: ${150 / 16}rem;
   }
-  @media ${QUERIES.phoneAndSmaller} {
-    width: ${60 / 16}rem;
-    height: ${60 / 16}rem;
+  @media ${QUERIES.laptopAndUp} {
+    width: ${200 / 16}rem;
+    height: ${200 / 16}rem;
   }
 `;
 
@@ -86,20 +86,19 @@ const Item = styled.p`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   width: 60%;
   text-transformation: uppercase;
   text-transform: uppercase;
   letter-spacing: normal;
   line-height: 1.2em;
   text-align: center;
-  font-size: ${FONTSIZE.bigItem.desktop};
+  font-size: ${FONTSIZE.bigItem.phone};
   font-weight: ${FONTWEIGHT.tier2};
 
-  @media ${QUERIES.tabletAndSmaller} {
+  @media ${QUERIES.tabletAndUp} {
     font-size: ${FONTSIZE.bigItem.tablet};
   }
-  @media ${QUERIES.phoneAndSmaller} {
-    font-size: ${FONTSIZE.bigItem.phone};
+  @media ${QUERIES.laptopAndUp} {
+    font-size: ${FONTSIZE.bigItem.desktop};
   }
 `;

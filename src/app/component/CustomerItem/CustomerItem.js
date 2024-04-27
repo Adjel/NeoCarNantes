@@ -27,17 +27,22 @@ const CustomerPhoto = styled(Image)`
 `;
 
 const ButtonsWrapper = styled.div`
-  position: absolute;
-  bottom: 0;
-  right: auto;
-  left: auto;
-  display: flex;
-  flex-direction: end;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 0 ${24 / 16}rem ${28 / 16}rem;
-  opacity: 0;
+  display: none;
+
+  @media ${QUERIES.tabletAndUp} {
+    display: revert;
+    position: absolute;
+    bottom: 0;
+    right: auto;
+    left: auto;
+    display: flex;
+    flex-direction: end;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 ${24 / 16}rem ${28 / 16}rem;
+    opacity: 0;
+  }
 `;
 
 const HoverWrapper = styled.div`
