@@ -26,14 +26,14 @@ const ResponsiveLogoWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: ${90 / 16}rem;
+  width: ${70 / 16}rem;
 
-  @media ${QUERIES.tabletAndSmaller} {
+  @media ${QUERIES.tabletAndUp} {
     width: ${80 / 16}rem;
   }
 
-  @media ${QUERIES.phoneAndSmaller} {
-    width: ${70 / 16}rem;
+  @media ${QUERIES.desktopAndUp} {
+    width: ${90 / 16}rem;
   }
 `;
 export default Logo;

@@ -36,15 +36,15 @@ const Wrapper = styled.div`
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  min-height: ${324 / 16}rem;
+  min-height: ${146 / 16}rem;
   background: ${COLORS.background.darkGray};
 
-  @media ${QUERIES.tabletAndSmaller} {
+  @media ${QUERIES.tabletAndUp} {
     min-height: ${224 / 16}rem;
   }
 
-  @media ${QUERIES.phoneAndSmaller} {
-    min-height: ${146 / 16}rem;
+  @media ${QUERIES.laptopAndUp} {
+    min-height: ${324 / 16}rem;
   }
 `;
 
@@ -53,16 +53,16 @@ const MainWrapper = styled.div`
   justify-content: space-evenly;
   align-items: baseline;
   width: 100%;
-  gap: ${50 / 16}rem;
-  margin: ${48 / 16}rem 0rem;
+  gap: ${10 / 16}rem;
+  margin: 0rem 0rem;
 
-  @media ${QUERIES.tabletAndSmaller} {
+  @media ${QUERIES.tabletAndUp} {
     gap: ${30 / 16}rem;
     margin: 0rem 0rem;
   }
-  @media ${QUERIES.phoneAndSmaller} {
-    gap: ${10 / 16}rem;
-    margin: 0rem 0rem;
+  @media ${QUERIES.laptopAndUp} {
+    gap: ${50 / 16}rem;
+    margin: ${48 / 16}rem 0rem;
   }
 `;
 
@@ -75,15 +75,15 @@ const BasicWrapper = styled.div`
   height: ${80 / 16}rem;
 
   > p {
-    font-size: ${FONTSIZE.little.desktop};
+    font-size: ${FONTSIZE.little.phone};
     font-weight: ${FONTWEIGHT.tier1};
     text-align: center;
 
-    @media ${QUERIES.tabletAndSmaller} {
+    @media ${QUERIES.tabletAndUp} {
       font-size: ${FONTSIZE.little.tablet};
     }
-    @media ${QUERIES.phoneAndSmaller} {
-      font-size: ${FONTSIZE.little.phone};
+    @media ${QUERIES.laptopAndUp} {
+      font-size: ${FONTSIZE.little.desktop};
     }
   }
 `;

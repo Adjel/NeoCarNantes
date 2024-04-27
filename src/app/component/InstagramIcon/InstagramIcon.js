@@ -1,3 +1,4 @@
+import { QUERIES } from "@/app/constant";
 import React from "react";
 
 import { IoLogoInstagram } from "react-icons/io5";

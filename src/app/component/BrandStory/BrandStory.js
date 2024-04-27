@@ -33,14 +33,17 @@ export default function BrandStory() {
 const Paragraphes = styled.p`
   color: black;
   font-weight: ${FONTWEIGHT.tier1};
-  font-size: ${FONTSIZE.item.desktop};
+  font-size: ${FONTSIZE.item.phone};
   color: black;
+  text-align: center;
+  padding: ${5 / 16}em;
+  line-height: 1.5em;
 
-  @media ${QUERIES.tabletAndSmaller} {
+  @media ${QUERIES.tabletAndUp} {
     font-size: ${FONTSIZE.item.tablet};
   }
-  @media ${QUERIES.phoneAndSmaller} {
-    font-size: ${FONTSIZE.item.phone};
+  @media ${QUERIES.laptopAndUp} {
+    font-size: ${FONTSIZE.item.laptopAndUp};
   }
 
   > * {

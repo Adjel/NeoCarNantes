@@ -28,12 +28,12 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 50vh;
   color: white;
   background: transparent;
 
-  @media ${QUERIES.phoneAndSmaller} {
-    height: 50vh;
+  @media ${QUERIES.tabletAndUp} {
+    height: 100vh;
   }
 `;
 
@@ -58,14 +58,14 @@ const Brand = styled.h1`
 
 const BrandContent = styled.em`
   color: inherit;
-  line-height: 3em;
+  line-height: 2em;
   text-align: center;
   font-weight: ${FONTWEIGHT.tier2};
   letter-spacing: 0.2em;
   font-style: normal;
 
-  @media ${QUERIES.tabletAndSmaller} {
-    line-height: 2em;
+  @media ${QUERIES.laptopAndUp} {
+    line-height: 3em;
   }
 `;
 

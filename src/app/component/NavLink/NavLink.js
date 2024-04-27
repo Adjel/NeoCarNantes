@@ -25,15 +25,15 @@ const Decoration = styled.div`
 `;
 
 const NavLinkItem = styled.div`
-  font-size: ${FONTSIZE.normal.desktop};
+  font-size: ${FONTSIZE.normal.phone};
   text-transform: uppercase;
   color: var(--color);
 
-  @media ${QUERIES.tabletAndSmaller} {
+  @media ${QUERIES.tabletAndUp} {
     font-size: ${FONTSIZE.normal.tablet};
   }
-  @media ${QUERIES.tabletAndSmaller} {
-    font-size: ${FONTSIZE.normal.phone};
+  @media ${QUERIES.laptopAndUp} {
+    font-size: ${FONTSIZE.normal.desktop};
   }
 `;
 

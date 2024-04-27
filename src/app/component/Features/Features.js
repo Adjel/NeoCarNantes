@@ -106,49 +106,48 @@ const Title = styled.h1`
   letter-spacing: 0.1em;
   font-family: din-next-w01-light, din-next-w02-light, din-next-w10-light,
     sans-serif;
-  font-size: ${FONTSIZE.title.desktop};
+  font-size: ${FONTSIZE.title.phone};
   font-weight: ${FONTWEIGHT.tier1};
   line-height: normal;
   text-align: center;
   font-family: ${FONTFAMILY.Fjalla};
 
-  @media ${QUERIES.tabletAndSmaller} {
+  @media ${QUERIES.tabletAndUp} {
     font-size: ${FONTSIZE.title.tablet};
   }
-  @media ${QUERIES.phoneAndSmaller} {
-    font-size: ${FONTSIZE.title.phone};
+  @media ${QUERIES.laptopAndUp} {
+    font-size: ${FONTSIZE.title.desktop};
   }
 `;
 const SubTitle = styled.h2`
   color: white;
-  font-size: ${FONTSIZE.content.desktop};
+  font-size: ${FONTSIZE.content.phone};
   font-weight: ${FONTWEIGHT.tier2};
 
-  @media ${QUERIES.tabletAndSmaller} {
+  @media ${QUERIES.tabletAndUp} {
     font-size: ${FONTSIZE.content.tablet};
   }
-  @media ${QUERIES.phoneAndSmaller} {
-    font-size: ${FONTSIZE.content.phone};
+  @media ${QUERIES.laptopAndUp} {
+    font-size: ${FONTSIZE.content.desktop};
   }
 `;
 
 const FlexWrapper = styled.article`
-  display: flex;
+  display: grid;
   width: 65%;
-  flex-wrap: wrap;
   justify-content: center;
   gap: ${15 / 16}rem;
   margin: ${36 / 16}rem;
 
-  @media ${QUERIES.tabletAndSmaller} {
+  @media ${QUERIES.tabletAndUp} {
     width: 85%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: ${15 / 16}rem;
   }
 
-  @media ${QUERIES.phoneAndSmaller} {
-    display: grid;
-    gap: ${15 / 16}rem;
+  @media ${QUERIES.laptopAndUp} {
+    display: flex;
+    width: 65%;
+    flex-wrap: wrap;
   }
 `;
