@@ -67,10 +67,10 @@ const Grid = styled.section`
   padding: ${64 / 16}rem;
 
   @media ${QUERIES.tabletAndSmaller} {
-    padding: ${48 / 16}rem${30 / 16}rem;
+    padding: ${48 / 16} rem ${30 / 16}rem;
   }
   @media ${QUERIES.phoneAndSmaller} {
-    padding: ${32 / 16}rem${10 / 16}rem;
+    padding: ${32 / 16} rem ${10 / 16}rem;
   }
 `;
 const Title = styled.h1`
