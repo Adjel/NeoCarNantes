@@ -69,8 +69,12 @@ const featuresData = [
 export default function Features() {
   return (
     <Wrapper>
-      <Title>PRESTATIONS</Title>
-      <SubTitle>Rien que pour vous !</SubTitle>
+      <header>
+        <Title>
+          <em style={{ fontStyle: "normal" }}>PRESTATIONS</em>
+        </Title>
+        <SubTitle>Rien que pour vous !</SubTitle>
+      </header>
       <FlexWrapper>
         {featuresData.map(
           ({ title, feature, subFeature, featureInfo }, index) => (
@@ -97,7 +101,7 @@ const Wrapper = styled.div`
   gap: 10px;
   background: ${COLORS.background.transparentBlack};
 `;
-const Title = styled.div`
+const Title = styled.h1`
   color: white;
   letter-spacing: 0.1em;
   font-family: din-next-w01-light, din-next-w02-light, din-next-w10-light,
@@ -115,7 +119,7 @@ const Title = styled.div`
     font-size: ${FONTSIZE.title.phone};
   }
 `;
-const SubTitle = styled.div`
+const SubTitle = styled.h2`
   color: white;
   font-size: ${FONTSIZE.content.desktop};
   font-weight: ${FONTWEIGHT.tier2};
@@ -128,7 +132,7 @@ const SubTitle = styled.div`
   }
 `;
 
-const FlexWrapper = styled.div`
+const FlexWrapper = styled.article`
   display: flex;
   width: 65%;
   flex-wrap: wrap;

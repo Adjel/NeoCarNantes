@@ -4,13 +4,7 @@ import Image from "next/image";
 import logo2 from "/public/logo2.svg";
 import logo3 from "/public/logo3.svg";
 import logo4 from "/public/logo4.svg";
-import {
-  COLORS,
-  FONTFAMILY,
-  FONTSIZE,
-  FONTWEIGHT,
-  QUERIES,
-} from "@/app/constant";
+import { COLORS, FONTSIZE, FONTWEIGHT, QUERIES } from "@/app/constant";
 
 const services = [
   { description: "réparation toutes marques", icon: logo2 },
@@ -24,7 +18,7 @@ export default function Services() {
       <ItemWrapper>
         <ResponsiveItemWrapper>
           <Image
-            alt="logo decoration"
+            alt={description}
             src={icon}
             quality={100}
             layout="responsive"
@@ -34,7 +28,9 @@ export default function Services() {
             }}
           />
         </ResponsiveItemWrapper>
-        <Item>{description}</Item>
+        <Item>
+          <em style={{ fontStyle: "normal" }}>{description}</em>
+        </Item>
       </ItemWrapper>
     );
   }
@@ -48,7 +44,7 @@ export default function Services() {
   );
 }
 
-const Wrapper = styled.div`
+const Wrapper = styled.article`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,7 +53,7 @@ const Wrapper = styled.div`
   background: ${COLORS.background.transparentLightBlack};
 
   @media ${QUERIES.tabletAndSmaller} {
-    height: 60vh;
+    height: 70vh;
   }
   @media ${QUERIES.phoneAndSmaller} {
     height: 30vh;

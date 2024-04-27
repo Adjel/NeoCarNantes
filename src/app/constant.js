@@ -37,9 +37,9 @@ export const FONTSIZE = {
     phone: `${16 / 16}rem`,
   },
   item: {
-    desktop: `${14 / 16}rem`,
-    tablet: `${12 / 16}rem`,
-    phone: `${10 / 16}rem`,
+    desktop: `${16 / 16}rem`,
+    tablet: `${15 / 16}rem`,
+    phone: `${14 / 16}rem`,
   },
   little: {
     desktop: `${12 / 16}rem`,
@@ -50,6 +50,7 @@ export const FONTSIZE = {
 
 export const FONTFAMILY = {
   Fjalla: "Fjalla One",
+  Pathway: "Pathway Gothic One",
 };
 
 export const FONTWEIGHT = {

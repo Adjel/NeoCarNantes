@@ -2,32 +2,27 @@
 import React from "react";
 import styled from "styled-components";
 import HeroLogo from "../HeroLogo/HeroLogo";
-import { FONTSIZE, FONTWEIGHT, QUERIES } from "@/app/constant";
+import { FONTFAMILY, FONTSIZE, FONTWEIGHT, QUERIES } from "@/app/constant";
 
 function Hero() {
   return (
     <Wrapper>
-      <BrandWrapper>
+      <Header>
         <HeroLogo />
-        <Brand>NEOCARNANTES</Brand>
+        <Brand>
+          <strong style={{ fontWeight: `${FONTWEIGHT.normal}` }}>
+            NEOCARNANTES
+          </strong>
+        </Brand>
+      </Header>
+      <article>
         <BrandContent>Atelier de Réparation Automobile</BrandContent>
-      </BrandWrapper>
+      </article>
     </Wrapper>
   );
 }
 
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: nowrap;
-  width: 100%;
-  height: 100%;
-  color: white;
-  background: transparent;
-`;
-
-const BrandWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,21 +32,19 @@ const BrandWrapper = styled.div`
   color: white;
   background: transparent;
 
-  * > {
-    @media ${QUERIES.tabletAndSmaller} {
-      line-height: 2em;
-    }
-    @media ${QUERIES.phoneAndSmaller} {
-      line-height: 1.2em;
-    }
-  }
-
-  @media ${QUERIES.tabletAndSmaller} {
-    height: 60vh;
-  }
   @media ${QUERIES.phoneAndSmaller} {
-    height: 40vh;
+    height: 50vh;
   }
+`;
+
+const Header = styled.header`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: white;
+  background: transparent;
 `;
 
 const Brand = styled.h1`
@@ -60,15 +53,16 @@ const Brand = styled.h1`
   text-align: center;
   font-size: ${FONTSIZE.big.desktop};
   font-weight: ${FONTWEIGHT.normal};
-  font-family: "Pathway Gothic One", sans-serif;
+  font-family: ${FONTFAMILY.Pathway}, sans-serif;
 `;
 
-const BrandContent = styled.p`
+const BrandContent = styled.em`
   color: inherit;
   line-height: 3em;
   text-align: center;
   font-weight: ${FONTWEIGHT.tier2};
   letter-spacing: 0.2em;
+  font-style: normal;
 
   @media ${QUERIES.tabletAndSmaller} {
     line-height: 2em;

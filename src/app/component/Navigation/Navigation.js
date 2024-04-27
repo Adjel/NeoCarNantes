@@ -58,7 +58,7 @@ function Navigation() {
   );
 }
 
-const Nav = styled.div`
+const Nav = styled.nav`
   display: flex;
   flex: 3;
   justify-content: space-around;

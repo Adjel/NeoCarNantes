@@ -1,25 +1,50 @@
 import React from "react";
 import DecorativeWrapper from "../DecorativeWrapper/DecorativeWrapper";
+import styled from "styled-components";
+import { FONTWEIGHT, FONTSIZE, QUERIES } from "@/app/constant";
 
 export default function BrandStory() {
   return (
     <DecorativeWrapper title={"histoire"}>
-      NeoCarNantes à été créé à l&apos;été 2020 par Quentin dans son garage
-      attenant à sa maison de St Philbert de Grand Lieu alors qu&apos;il
-      cumulait ce travail avec son métier dans l&apos;aéronautique.
-      <br />
-      <br /> Après des journées, nuits pendant tout le confinement au service
-      des ses clients il a décidé de quitté son premier travail afin de se
-      consacrer à 200% dans sa passion de toujours : l&apos;automobile.
-      <br />
-      <br />
-      Cette passion dévorante lui a permis de grandir et de créer son Atelier de
-      réparation automobile à La Beaujoire (Nantes).
-      <br />
-      <br />
-      Aujourd&apos;hui plus grand mais aussi accompagné ! NeoCarNantes est à ce
-      jour une entreprise familiale car sa femme Charlotte (Chacha) l&apos;a
-      rejoint dans l&apos;aventure !
+      <Paragraphes>
+        <strong>NeoCarNantes</strong> à été créé à l&apos;été 2020 par Quentin
+        dans son <em>garage</em> attenant à sa maison de St Philbert de Grand
+        Lieu alors qu&apos;il cumulait ce travail avec son métier dans
+        l&apos;aéronautique.
+      </Paragraphes>
+      <Paragraphes>
+        Après des journées, nuits pendant tout le confinement au service des ses
+        clients il a décidé de quitté son premier travail afin de se consacrer à
+        200% dans sa passion de toujours : l&apos;automobile.
+      </Paragraphes>
+      <Paragraphes>
+        Cette passion dévorante lui a permis de grandir et de créer son Atelier
+        de réparation automobile à <strong>La Beaujoire (Nantes)</strong>.
+      </Paragraphes>
+      <Paragraphes>
+        Aujourd&apos;hui plus grand mais aussi accompagné !&nbsp;
+        <strong>NeoCarNantes</strong> est à ce jour une entreprise familiale car
+        sa femme Charlotte (Chacha) l&apos;a rejoint dans l&apos;aventure !
+      </Paragraphes>
     </DecorativeWrapper>
   );
 }
+
+const Paragraphes = styled.p`
+  color: black;
+  font-weight: ${FONTWEIGHT.tier1};
+  font-size: ${FONTSIZE.item.desktop};
+  color: black;
+
+  @media ${QUERIES.tabletAndSmaller} {
+    font-size: ${FONTSIZE.item.tablet};
+  }
+  @media ${QUERIES.phoneAndSmaller} {
+    font-size: ${FONTSIZE.item.phone};
+  }
+
+  > * {
+    font-weight: inherit;
+    font-style: inherit;
+  }
+`;
