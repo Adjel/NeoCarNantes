@@ -70,7 +70,7 @@ const Nav = styled.nav`
 
   @media ${QUERIES.tabletAndSmaller} {
     justify-content: center;
-    gap: 42px;
+    gap: ${42 / 16}rem;
   }
 `;
 

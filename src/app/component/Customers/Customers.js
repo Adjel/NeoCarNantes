@@ -47,13 +47,13 @@ const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
-  margin-top: 64px;
+  margin-top: ${64 / 16}rem;
 
   @media ${QUERIES.tabletAndSmaller} {
-    margin-top: 48px;
+    margin-top: ${48 / 16}rem;
   }
   @media ${QUERIES.phoneAndSmaller} {
-    margin-top: 32px;
+    margin-top: ${32 / 16}rem;
   }
 `;
 
@@ -64,13 +64,13 @@ const Grid = styled.section`
   justify-items: center;
   justify-content: center;
   align-content: center;
-  padding: 64px;
+  padding: ${64 / 16}rem;
 
   @media ${QUERIES.tabletAndSmaller} {
-    padding: 48px 30px;
+    padding: ${48 / 16}rem${30 / 16}rem;
   }
   @media ${QUERIES.phoneAndSmaller} {
-    padding: 32px 10px;
+    padding: ${32 / 16}rem${10 / 16}rem;
   }
 `;
 const Title = styled.h1`

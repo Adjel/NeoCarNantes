@@ -30,11 +30,11 @@ const HeaderWrapper = styled.div`
   align-items: center;
   width: 100%;
   height: auto;
-  padding: 6px 64px;
+  padding: ${6 / 16}rem ${64 / 16}rem;
   background: ${COLORS.background.darkGray};
 
   @media ${QUERIES.tabletAndSmaller} {
-    padding: 6px;
+    padding: ${6 / 16}rem;
   }
 
   @media ${QUERIES.phoneAndSmaller} {
@@ -48,7 +48,7 @@ const MobileWrapper = styled.div`
   align-items: center;
   width: 100%;
   height: fit-content;
-  padding: 6px 18px;
+  padding: ${6 / 16}rem ${18 / 16}rem;
   background: ${COLORS.background.darkGray};
 
   @media ${QUERIES.phoneAndSmaller} {

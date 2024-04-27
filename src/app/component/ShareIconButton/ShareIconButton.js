@@ -22,8 +22,8 @@ IconButtonComponent.defaultProps = {
 // Not be overrided because the user will override Image directly
 // and Image override img
 const Icon = styled(IoArrowRedoOutline)`
-  width: 36px;
-  height: 24px;
+  width: ${36 / 16}rem;
+  height: ${24 / 16}rem;
   &:hover {
     filter: invert(20%);
   }

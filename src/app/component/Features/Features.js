@@ -97,8 +97,8 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding-top: 80px;
-  gap: 10px;
+  padding-top: ${80 / 16}rem;
+  gap: ${10 / 16}rem;
   background: ${COLORS.background.transparentBlack};
 `;
 const Title = styled.h1`
@@ -137,14 +137,14 @@ const FlexWrapper = styled.article`
   width: 65%;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
-  margin: 36px;
+  gap: ${15 / 16}rem;
+  margin: ${36 / 16}rem;
 
   @media ${QUERIES.tabletAndSmaller} {
     width: 85%;
   }
   @media ${QUERIES.phoneAndSmaller} {
     display: grid;
-    gap: 15px;
+    gap: ${15 / 16}rem;
   }
 `;

@@ -67,7 +67,7 @@ const ScrollWrapper = styled.div`
 
   width: 100%;
   overflow-y: auto;
-  padding-top: 36px;
+  padding-top: ${36 / 16}rem;
 `;
 
 const LargeSection = styled.section`

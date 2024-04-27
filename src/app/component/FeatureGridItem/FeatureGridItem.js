@@ -25,12 +25,12 @@ export default function FeatureGridItem({
 const Wrapper = styled.article`
   flex: 1;
   display: flex;
-  min-width: 210px;
-  min-height: 350px;
+  min-width: ${210 / 16}rem;
+  min-height: ${350 / 16}rem;
   flex-direction: column;
   align-items: center;
-  gap: 26px;
-  padding: 25px 8px;
+  gap: ${26 / 16}rem;
+  padding: ${25 / 16} rem ${8 / 16}rem;
   background: ${COLORS.background.transparentLightGray};
 
   @media ${QUERIES.tabletAndSmaller} {
@@ -39,8 +39,8 @@ const Wrapper = styled.article`
     min-height: fit-content;
   }
   @media ${QUERIES.tabletAndSmaller} {
-    gap: 16px;
-    padding: 8px 8px;
+    gap: 1rem;
+    padding: 0.5rem 0.5rem;
   }
 `;
 const FeatureTitle = styled.h1`

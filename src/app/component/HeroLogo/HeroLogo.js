@@ -21,16 +21,16 @@ const ResponsiveLogoWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 350px;
-  height: 350px;
+  width: ${350 / 16}rem;
+  height: ${350 / 16}rem;
 
   @media ${QUERIES.tabletAndSmaller} {
-    width: 250px;
-    height: 250px;
+    width: ${250 / 16}rem;
+    height: ${250 / 16}remx;
   }
   @media ${QUERIES.phoneAndSmaller} {
-    width: 150px;
-    height: 150px;
+    width: ${150 / 16}rem;
+    height: ${150 / 16}rem;
   }
 `;
 

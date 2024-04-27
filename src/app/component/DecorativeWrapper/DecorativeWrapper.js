@@ -39,18 +39,18 @@ const Background = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 68px;
-  padding-inline: 64px;
+  padding: ${68 / 16}rem;
+  padding-inline: ${64 / 16}rem;
   width: 100%;
   height: auto;
   background: ${COLORS.background.transparentGray};
   margin-top: var(--margin-top);
 
   @media ${QUERIES.tabletAndSmaller} {
-    padding: 68px 0;
+    padding: ${68 / 16}rem 0;
   }
   @media ${QUERIES.phoneAndSmaller} {
-    padding: 36px 0;
+    padding: ${36 / 16}rem 0;
   }
 `;
 
@@ -59,8 +59,8 @@ const WhiteWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 36px 0;
-  gap: 22px;
+  padding: ${36 / 16}rem 0;
+  gap: ${22 / 16}rem;
   width: 50%;
   background: white;
 
@@ -77,7 +77,7 @@ const HeaderWrapper = styled.header`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 22px;
+  gap: ${22 / 16}rem;
 `;
 
 const Title = styled.h1`

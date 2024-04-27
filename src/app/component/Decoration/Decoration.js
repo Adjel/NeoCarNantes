@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 export default function Decoration({
   backgroundColor = "white",
-  width = "46px",
-  height = "3px",
+  width = `${46 / 16}rem`,
+  height = `${3 / 16}rem`,
 }) {
   return (
     <Item

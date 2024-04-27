@@ -19,7 +19,7 @@ function NavLink({ children, link, isActive }) {
 
 const Decoration = styled.div`
   width: 120%;
-  height: 3px;
+  height: ${3 / 16}rem;
   background: black;
   display: var(--display);
 `;
@@ -41,7 +41,7 @@ const Wrapper = styled.a`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  gap: ${6 / 16}rem;
 
   &:hover {
     ${Decoration} {

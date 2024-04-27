@@ -30,8 +30,8 @@ const Button = styled.button`
 `;
 
 const HamburgerIcon = styled(RxHamburgerMenu)`
-  width: 30px;
-  height: 30px;
+  width: ${30 / 16}rem;
+  height: ${30 / 16}rem;
   color: ${COLORS.primary};
 `;
 
