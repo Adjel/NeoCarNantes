@@ -37,9 +37,9 @@ export const FONTSIZE = {
     phone: `${16 / 16}rem`,
   },
   item: {
-    desktop: `${14 / 16}rem`,
-    tablet: `${12 / 16}rem`,
-    phone: `${10 / 16}rem`,
+    desktop: `${16 / 16}rem`,
+    tablet: `${15 / 16}rem`,
+    phone: `${14 / 16}rem`,
   },
   little: {
     desktop: `${12 / 16}rem`,
@@ -50,6 +50,7 @@ export const FONTSIZE = {
 
 export const FONTFAMILY = {
   Fjalla: "Fjalla One",
+  Pathway: "Pathway Gothic One",
 };
 
 export const FONTWEIGHT = {
@@ -61,18 +62,18 @@ export const FONTWEIGHT = {
   bold: "700",
 };
 
-// Desktop is the basic display, so it's display by default and be
+// Mobile is the basic display, so it's display by default and be
 // hidden if we are on other device size type
 
 // Reverse for others
 export const BREAKPOINTS = {
-  phoneMax: 550,
-  tabletMax: 1100,
-  laptopMax: 1500,
+  tabletMin: 550,
+  laptopMin: 1100,
+  desktopMin: 1500,
 };
 
 export const QUERIES = {
-  laptopAndSmaller: `(max-width: ${BREAKPOINTS.laptopMax / 16}rem)`,
-  tabletAndSmaller: `(max-width: ${BREAKPOINTS.tabletMax / 16}rem)`,
-  phoneAndSmaller: `(max-width: ${BREAKPOINTS.phoneMax / 16}rem)`,
+  tabletAndUp: `(min-width: ${BREAKPOINTS.tabletMin / 16}rem)`,
+  laptopAndUp: `(min-width: ${BREAKPOINTS.laptopMin / 16}rem)`,
+  desktopAndUp: `(min-width: ${BREAKPOINTS.desktopMin / 16}rem)`,
 };

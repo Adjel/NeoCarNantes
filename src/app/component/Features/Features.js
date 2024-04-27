@@ -69,8 +69,12 @@ const featuresData = [
 export default function Features() {
   return (
     <Wrapper>
-      <Title>PRESTATIONS</Title>
-      <SubTitle>Rien que pour vous !</SubTitle>
+      <header>
+        <Title>
+          <em style={{ fontStyle: "normal" }}>PRESTATIONS</em>
+        </Title>
+        <SubTitle>Rien que pour vous !</SubTitle>
+      </header>
       <FlexWrapper>
         {featuresData.map(
           ({ title, feature, subFeature, featureInfo }, index) => (
@@ -93,54 +97,57 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding-top: 80px;
-  gap: 10px;
+  padding-top: ${80 / 16}rem;
+  gap: ${10 / 16}rem;
   background: ${COLORS.background.transparentBlack};
 `;
-const Title = styled.div`
+const Title = styled.h1`
   color: white;
   letter-spacing: 0.1em;
   font-family: din-next-w01-light, din-next-w02-light, din-next-w10-light,
     sans-serif;
-  font-size: ${FONTSIZE.title.desktop};
+  font-size: ${FONTSIZE.title.phone};
   font-weight: ${FONTWEIGHT.tier1};
   line-height: normal;
   text-align: center;
   font-family: ${FONTFAMILY.Fjalla};
 
-  @media ${QUERIES.tabletAndSmaller} {
+  @media ${QUERIES.tabletAndUp} {
     font-size: ${FONTSIZE.title.tablet};
   }
-  @media ${QUERIES.phoneAndSmaller} {
-    font-size: ${FONTSIZE.title.phone};
+  @media ${QUERIES.laptopAndUp} {
+    font-size: ${FONTSIZE.title.desktop};
   }
 `;
-const SubTitle = styled.div`
+const SubTitle = styled.h2`
   color: white;
-  font-size: ${FONTSIZE.content.desktop};
+  font-size: ${FONTSIZE.content.phone};
   font-weight: ${FONTWEIGHT.tier2};
 
-  @media ${QUERIES.tabletAndSmaller} {
+  @media ${QUERIES.tabletAndUp} {
     font-size: ${FONTSIZE.content.tablet};
   }
-  @media ${QUERIES.phoneAndSmaller} {
-    font-size: ${FONTSIZE.content.phone};
+  @media ${QUERIES.laptopAndUp} {
+    font-size: ${FONTSIZE.content.desktop};
   }
 `;
 
-const FlexWrapper = styled.div`
-  display: flex;
+const FlexWrapper = styled.article`
+  display: grid;
   width: 65%;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
-  margin: 36px;
+  gap: ${15 / 16}rem;
+  margin: ${36 / 16}rem;
 
-  @media ${QUERIES.tabletAndSmaller} {
+  @media ${QUERIES.tabletAndUp} {
     width: 85%;
-  }
-  @media ${QUERIES.phoneAndSmaller} {
     display: grid;
-    gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media ${QUERIES.laptopAndUp} {
+    display: flex;
+    width: 65%;
+    flex-wrap: wrap;
   }
 `;

@@ -22,22 +22,27 @@ export default function CustomerItem({ alt, src }) {
 
 const CustomerPhoto = styled(Image)`
   object-fit: cover;
-  width: 430px;
-  height: 300px;
+  width: ${400 / 16}rem;
+  height: ${300 / 16}rem;
 `;
 
 const ButtonsWrapper = styled.div`
-  position: absolute;
-  bottom: 0;
-  right: auto;
-  left: auto;
-  display: flex;
-  flex-direction: end;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 0 24px 28px;
-  opacity: 0;
+  display: none;
+
+  @media ${QUERIES.tabletAndUp} {
+    display: revert;
+    position: absolute;
+    bottom: 0;
+    right: auto;
+    left: auto;
+    display: flex;
+    flex-direction: end;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 ${24 / 16}rem ${28 / 16}rem;
+    opacity: 0;
+  }
 `;
 
 const HoverWrapper = styled.div`

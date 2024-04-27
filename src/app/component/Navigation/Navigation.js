@@ -58,19 +58,20 @@ function Navigation() {
   );
 }
 
-const Nav = styled.div`
+const Nav = styled.nav`
   display: flex;
   flex: 3;
-  justify-content: space-around;
+  justify-content: center;
   align-self: center;
   align-items: center;
   width: auto;
   height: auto;
   background: inherit;
+  gap: ${42 / 16}rem;
 
-  @media ${QUERIES.tabletAndSmaller} {
-    justify-content: center;
-    gap: 42px;
+  @media ${QUERIES.laptopAndUp} {
+    justify-content: space-around;
+    gap: none;
   }
 `;
 

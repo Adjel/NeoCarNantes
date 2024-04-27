@@ -19,21 +19,21 @@ function NavLink({ children, link, isActive }) {
 
 const Decoration = styled.div`
   width: 120%;
-  height: 3px;
+  height: ${3 / 16}rem;
   background: black;
   display: var(--display);
 `;
 
 const NavLinkItem = styled.div`
-  font-size: ${FONTSIZE.normal.desktop};
+  font-size: ${FONTSIZE.normal.phone};
   text-transform: uppercase;
   color: var(--color);
 
-  @media ${QUERIES.tabletAndSmaller} {
+  @media ${QUERIES.tabletAndUp} {
     font-size: ${FONTSIZE.normal.tablet};
   }
-  @media ${QUERIES.tabletAndSmaller} {
-    font-size: ${FONTSIZE.normal.phone};
+  @media ${QUERIES.laptopAndUp} {
+    font-size: ${FONTSIZE.normal.desktop};
   }
 `;
 
@@ -41,7 +41,7 @@ const Wrapper = styled.a`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  gap: ${6 / 16}rem;
 
   &:hover {
     ${Decoration} {

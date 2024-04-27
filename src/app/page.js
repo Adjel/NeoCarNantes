@@ -10,34 +10,35 @@ import BrandStory from "./component/BrandStory/BrandStory";
 import Services from "./component/Services/Services";
 
 export default function Home() {
-  // Hero has two section inside
   return (
-    <Wrapper>
-      <ScrollWrapper>
-        <section id="hero">
-          <Hero />
-        </section>
-        <LargeSection id="services">
-          <Services />
-        </LargeSection>
-        <LargeSection id="story">
-          <BrandStory />
-        </LargeSection>
-        <section id="features">
-          <Features />
-        </section>
-        <section id="customers">
-          <Customers />
-        </section>
-        <LargeSection id="contact">
-          <Contact />
-        </LargeSection>
-        <Footer />
-      </ScrollWrapper>
-      <HeaderWrapper>
-        <Header />
-      </HeaderWrapper>
-    </Wrapper>
+    <body>
+      <Wrapper>
+        <ScrollWrapper>
+          <section id="hero">
+            <Hero />
+          </section>
+          <LargeSection id="services">
+            <Services />
+          </LargeSection>
+          <LargeSection id="story">
+            <BrandStory />
+          </LargeSection>
+          <section id="features">
+            <Features />
+          </section>
+          <section id="customers">
+            <Customers />
+          </section>
+          <LargeSection id="contact">
+            <Contact />
+          </LargeSection>
+          <Footer />
+        </ScrollWrapper>
+        <HeaderWrapper>
+          <Header />
+        </HeaderWrapper>
+      </Wrapper>
+    </body>
   );
 }
 
@@ -50,10 +51,10 @@ const Wrapper = styled.div`
   overflow: hidden;
   background-image: url("/bmwstyle.png");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: ;
 `;
 
-const HeaderWrapper = styled.div`
+const HeaderWrapper = styled.header`
   width: 100%;
   overflow: hidden;
   position: fixed;
@@ -66,7 +67,7 @@ const ScrollWrapper = styled.div`
 
   width: 100%;
   overflow-y: auto;
-  padding-top: 36px;
+  padding-top: ${36 / 16}rem;
 `;
 
 const LargeSection = styled.section`

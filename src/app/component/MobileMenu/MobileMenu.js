@@ -19,19 +19,18 @@ export default function MobileMenu({ links }) {
 const Wrapper = styled.div``;
 
 const Button = styled.button`
-  display: none;
   width: fit-content;
   background: none;
   border: none;
 
-  @media ${QUERIES.tabletAndSmaller} {
-    display: revert;
+  @media ${QUERIES.tabletAndUp} {
+    display: none;
   }
 `;
 
 const HamburgerIcon = styled(RxHamburgerMenu)`
-  width: 30px;
-  height: 30px;
+  width: ${30 / 16}rem;
+  height: ${30 / 16}rem;
   color: ${COLORS.primary};
 `;
 

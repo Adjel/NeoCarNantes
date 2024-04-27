@@ -1,3 +1,4 @@
+import { QUERIES } from "@/app/constant";
 import React from "react";
 
 import { IoLogoInstagram } from "react-icons/io5";
@@ -18,16 +19,16 @@ const Background = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
+  width: ${30 / 16}rem;
+  height: ${30 / 16}rem;
   background-color: white;
   border-radius: 50%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-top: 12px;
+  box-shadow: 0 ${2 / 16}rem ${4 / 16}rem rgba(0, 0, 0, 0.1);
+  margin-top: ${12 / 16}rem;
 `;
 
 const Icon = styled(IoLogoInstagram)`
   color: black;
-  width: 20px;
-  height: 20px;
+  width: ${20 / 16}rem;
+  height: ${20 / 16}rem;
 `;

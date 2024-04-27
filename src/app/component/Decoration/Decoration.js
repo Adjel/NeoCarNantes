@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 export default function Decoration({
   backgroundColor = "white",
-  width = "46px",
-  height = "3px",
+  width = `${46 / 16}rem`,
+  height = `${3 / 16}rem`,
 }) {
   return (
     <Item
@@ -17,7 +17,8 @@ export default function Decoration({
   );
 }
 
-const Item = styled.div`
+// not an hr because the semantic of hr not have any sense here we only want a decoration
+const Item = styled.span`
   width: var(--width);
   height: var(--height);
   background: var(--backgroundColor);

@@ -29,14 +29,14 @@ const Button = styled.button`
 `;
 
 const FilledIcon = styled(TbHeartFilled)`
-  width: 24px;
-  height: 24px;
+  width: ${24 / 16}rem;
+  height: ${24 / 16}rem;
   color: red;
 `;
 
 const Icon = styled(TbHeart)`
-  width: 24px;
-  height: 24px;
+  width: ${24 / 16}rem;
+  height: ${24 / 16}rem;
 
   &:hover {
     filter: invert(20%);

@@ -25,59 +25,60 @@ const Header = () => {
 };
 
 const HeaderWrapper = styled.div`
-  display: flex;
+  display: none;
   justify-content: space-around;
   align-items: center;
   width: 100%;
   height: auto;
-  padding: 6px 64px;
+  padding: ${6 / 16}rem;
   background: ${COLORS.background.darkGray};
 
-  @media ${QUERIES.tabletAndSmaller} {
-    padding: 6px;
-  }
-
-  @media ${QUERIES.phoneAndSmaller} {
-    display: none;
+  @media ${QUERIES.tabletAndUp} {
+    display: flex;
+    padding: ${6 / 16}rem ${64 / 16}rem;
   }
 `;
 
 const MobileWrapper = styled.div`
-  display: none;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   height: fit-content;
-  padding: 6px 18px;
+  padding: ${6 / 16}rem ${18 / 16}rem;
   background: ${COLORS.background.darkGray};
 
-  @media ${QUERIES.phoneAndSmaller} {
-    display: flex;
+  @media ${QUERIES.tabletAndUp} {
+    display: none;
   }
 `;
 
 const LogoWrapper = styled.div`
-  display: flex;
-  flex: 1;
+  display: none;
+  flex: 0;
   justify-content: center;
   align-items: center;
   width: auto;
   height: auto;
 
-  @media ${QUERIES.tabletAndSmaller} {
+  @media ${QUERIES.tabletAndUp} {
+    display: revert;
     flex: 0;
   }
-  @media ${QUERIES.phoneAndSmaller} {
-    display: none;
+
+  @media ${QUERIES.laptopAndUp} {
+    flex: 1;
   }
 `;
 
-const Divider = styled.div`
-  display: flex;
-  flex: 1;
+// used to center the nav into the header
+// we want to have the logo to the left on tablet and mobile
+const Divider = styled.span`
+  display: none;
 
-  @media ${QUERIES.tabletAndSmaller} {
-    display: none;
+  @media ${QUERIES.laptopAndUp} {
+    display: revert;
+    flex: 1;
   }
 `;
 
