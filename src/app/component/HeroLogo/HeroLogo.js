@@ -12,8 +12,6 @@ function HeroLogo() {
         layout="responsive"
         src={logo}
         quality={100}
-        width={350}
-        height={350}
       />
     </ResponsiveLogoWrapper>
   );

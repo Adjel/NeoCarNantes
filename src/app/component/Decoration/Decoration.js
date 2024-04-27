@@ -17,7 +17,8 @@ export default function Decoration({
   );
 }
 
-const Item = styled.div`
+// not an hr because the semantic of hr not have any sense here we only want a decoration
+const Item = styled.span`
   width: var(--width);
   height: var(--height);
   background: var(--backgroundColor);

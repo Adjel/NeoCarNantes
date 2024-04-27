@@ -72,7 +72,9 @@ const LogoWrapper = styled.div`
   }
 `;
 
-const Divider = styled.div`
+// used to center the nav into the header
+// we want to have the logo to the left on tablet and mobile
+const Divider = styled.span`
   display: flex;
   flex: 1;
 

@@ -13,14 +13,16 @@ export default function FeatureGridItem({
     <Wrapper>
       <FeatureTitle>{title}</FeatureTitle>
       <Decoration style={{ flex: "1" }} />
-      <FeatureContent>{feature}</FeatureContent>
-      <FeatureContent>{subFeature}</FeatureContent>
-      <FeatureContent>{featureInfo}</FeatureContent>
+      <article>
+        <FeatureContent>{feature}</FeatureContent>
+        <FeatureContent>{subFeature}</FeatureContent>
+        <FeatureContent>{featureInfo}</FeatureContent>
+      </article>
     </Wrapper>
   );
 }
 
-const Wrapper = styled.div`
+const Wrapper = styled.article`
   flex: 1;
   display: flex;
   min-width: 210px;
@@ -41,11 +43,13 @@ const Wrapper = styled.div`
     padding: 8px 8px;
   }
 `;
-const FeatureTitle = styled.p`
+const FeatureTitle = styled.h1`
   flex: 1;
   text-align: center;
   font-size: ${FONTSIZE.item.desktop};
+  font-weight: ${FONTWEIGHT.normal};
 `;
+
 const FeatureContent = styled.p`
   flex: 1;
   text-align: center;

@@ -9,14 +9,23 @@ function DecorativeWrapper({
   textAlign,
   paddingStart,
   marginTop = "0",
+  textColor,
+  decorativeImage,
 }) {
   return (
     <Background style={{ "--margin-top": marginTop }}>
+      {decorativeImage}
       <WhiteWrapper>
-        <Title>{title}</Title>
-        <Decoration backgroundColor="black" />
+        <HeaderWrapper>
+          <Title>{title}</Title>
+          <Decoration backgroundColor="black" />
+        </HeaderWrapper>
         <Content
-          style={{ "--text-align": textAlign, "--padding-start": paddingStart }}
+          style={{
+            "--text-align": textAlign,
+            "--padding-start": paddingStart,
+            "--text-color": textColor,
+          }}
         >
           {children}
         </Content>
@@ -63,6 +72,14 @@ const WhiteWrapper = styled.div`
   }
 `;
 
+const HeaderWrapper = styled.header`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+`;
+
 const Title = styled.h1`
   color: ${COLORS.primary};
   font-weight: ${FONTWEIGHT.tier25};
@@ -77,21 +94,12 @@ const Title = styled.h1`
   }
 `;
 
-const Content = styled.p`
+const Content = styled.article`
   width: 80%;
   height: auto;
   text-align: var(--text-align);
   padding-left: var(--padding-start);
-  font-weight: ${FONTWEIGHT.tier1};
-  font-size: ${FONTSIZE.item.desktop};
-  color: black;
-
-  @media ${QUERIES.tabletAndSmaller} {
-    font-size: ${FONTSIZE.item.tablet};
-  }
-  @media ${QUERIES.phoneAndSmaller} {
-    font-size: ${FONTSIZE.item.phone};
-  }
+  color: var(--text-color);
 `;
 
 export default DecorativeWrapper;

@@ -27,8 +27,10 @@ const images = [
 const Customers = () => {
   return (
     <Wrapper>
-      <Title>une passion à partager</Title>
-      <Content>Quelques pépites passées chez nous</Content>
+      <header>
+        <Title>une passion à partager</Title>
+        <Content>Quelques pépites passées chez nous</Content>
+      </header>
       <Grid>
         {images.map((image, index) => (
           <CustomerItem key={index} alt="a customer car" src={image} />
@@ -55,7 +57,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const Grid = styled.div`
+const Grid = styled.section`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
@@ -65,13 +67,13 @@ const Grid = styled.div`
   padding: 64px;
 
   @media ${QUERIES.tabletAndSmaller} {
-    padding: 48px 0;
+    padding: 48px 30px;
   }
   @media ${QUERIES.phoneAndSmaller} {
-    padding: 32px 0;
+    padding: 32px 10px;
   }
 `;
-const Title = styled.div`
+const Title = styled.h1`
   color: white;
   letter-spacing: 0.1em;
   font-size: ${FONTSIZE.title.desktop};
@@ -79,13 +81,14 @@ const Title = styled.div`
   text-align: center;
   text-transform: uppercase;
   font-family: "Fjalla One";
+  font-weight: ${FONTWEIGHT.normal};
 
   @media ${QUERIES.phoneAndSmaller} {
     font-size: ${FONTSIZE.title.phone};
   }
 `;
 
-const Content = styled.p`
+const Content = styled.h2`
   color: white;
   font-size: ${FONTSIZE.content.desktop};
   font-weight: ${FONTWEIGHT.tier2};
