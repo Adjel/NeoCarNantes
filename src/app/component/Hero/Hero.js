@@ -15,9 +15,7 @@ function Hero() {
           </strong>
         </Brand>
       </Header>
-      <article>
-        <BrandContent>Atelier de Réparation Automobile</BrandContent>
-      </article>
+      <BrandContent>Atelier de Réparation Automobile</BrandContent>
     </Wrapper>
   );
 }
@@ -42,15 +40,12 @@ const Header = styled.header`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
   color: white;
   background: transparent;
 `;
 
 const Brand = styled.h1`
   color: inherit;
-  line-height: 1em;
-  text-align: center;
   font-size: ${FONTSIZE.big.desktop};
   font-weight: ${FONTWEIGHT.normal};
   font-family: ${FONTFAMILY.Pathway}, sans-serif;
@@ -58,15 +53,9 @@ const Brand = styled.h1`
 
 const BrandContent = styled.em`
   color: inherit;
-  line-height: 2em;
-  text-align: center;
   font-weight: ${FONTWEIGHT.tier2};
   letter-spacing: 0.2em;
   font-style: normal;
-
-  @media ${QUERIES.laptopAndUp} {
-    line-height: 3em;
-  }
 `;
 
 export default Hero;
