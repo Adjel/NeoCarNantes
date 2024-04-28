@@ -21,7 +21,7 @@ function HeroLogo() {
   );
 }
 
-const ResponsiveLogoWrapper = styled.div`
+const ResponsiveLogoWrapper = styled.picture`
   display: flex;
   width: ${150 / 16}rem;
   height: ${150 / 16}rem;

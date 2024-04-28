@@ -22,7 +22,7 @@ function Logo() {
   );
 }
 
-const ResponsiveLogoWrapper = styled.div`
+const ResponsiveLogoWrapper = styled.picture`
   display: flex;
   justify-content: center;
   align-items: center;

@@ -10,11 +10,11 @@ export default function Footer() {
       <MainWrapper>
         <AdaptiveHeightWrapper>
           <p>NEOCARNANTES</p>
-          <p>10 IMPASSE DE BELGIQUE</p>
-          <p>44300 NANTES</p>
+          <address>10 IMPASSE DE BELGIQUE</address>
+          <address>44300 NANTES</address>
         </AdaptiveHeightWrapper>
         <AdaptiveHeightWrapper>
-          <p>44300 NANTES SUIVEZ NOUS SUR INSTAGRAM !</p>
+          <p>SUIVEZ NOUS SUR INSTAGRAM !</p>
           <p>neocarnantes</p>
           <InstagramIcon />
         </AdaptiveHeightWrapper>
@@ -24,7 +24,10 @@ export default function Footer() {
         </BasicWrapper>
       </MainWrapper>
       <AdaptiveHeightWrapper>
-        <p>© Quentin & Chacha NeoCarNantes</p>
+        <p>
+          © Quentin & Chacha&nbsp;
+          <strong>NeoCarNantes</strong>
+        </p>
       </AdaptiveHeightWrapper>
     </Wrapper>
   );
@@ -74,16 +77,22 @@ const BasicWrapper = styled.div`
   gap: ${2 / 16}rem;
   height: ${80 / 16}rem;
 
-  > p {
+  > p,
+  address {
     font-size: ${FONTSIZE.little.phone};
     font-weight: ${FONTWEIGHT.tier1};
     text-align: center;
+    font-style: normal;
 
     @media ${QUERIES.tabletAndUp} {
       font-size: ${FONTSIZE.little.tablet};
     }
     @media ${QUERIES.laptopAndUp} {
       font-size: ${FONTSIZE.little.desktop};
+    }
+
+    > strong {
+      font-weight: ${FONTWEIGHT.tier1};
     }
   }
 `;

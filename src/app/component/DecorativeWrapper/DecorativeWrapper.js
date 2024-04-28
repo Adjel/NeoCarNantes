@@ -56,7 +56,7 @@ const Background = styled.div`
   }
 `;
 
-const WhiteWrapper = styled.div`
+const WhiteWrapper = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -96,7 +96,7 @@ const Title = styled.h1`
   }
 `;
 
-const Content = styled.article`
+const Content = styled.div`
   width: 80%;
   height: auto;
   text-align: var(--text-align);

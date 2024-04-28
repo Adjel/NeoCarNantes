@@ -132,7 +132,7 @@ const SubTitle = styled.h2`
   }
 `;
 
-const FlexWrapper = styled.article`
+const FlexWrapper = styled.div`
   display: grid;
   width: 65%;
   justify-content: center;
