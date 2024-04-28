@@ -80,7 +80,7 @@ const FeatureContent = styled.p`
   }
 `;
 
-const Article = styled.article`
+const Article = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

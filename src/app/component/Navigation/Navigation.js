@@ -49,16 +49,22 @@ function Navigation() {
 
   return (
     <Nav>
-      {links.map(({ name, link }) => (
-        <NavLink key={link} link={`#${link}`} isActive={activeLink === link}>
-          {name}
-        </NavLink>
-      ))}
+      <NavList>
+        {links.map(({ name, link }) => (
+          <NavLink key={link} link={`#${link}`} isActive={activeLink === link}>
+            {name}
+          </NavLink>
+        ))}
+      </NavList>
     </Nav>
   );
 }
 
 const Nav = styled.nav`
+  padding: 0 ${30 / 16}rem;
+`;
+
+const NavList = styled.ul`
   display: flex;
   flex: 3;
   justify-content: center;
@@ -68,6 +74,7 @@ const Nav = styled.nav`
   height: auto;
   background: inherit;
   gap: ${42 / 16}rem;
+  list-style-type: none;
 
   @media ${QUERIES.laptopAndUp} {
     justify-content: space-around;

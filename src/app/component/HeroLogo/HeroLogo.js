@@ -12,22 +12,25 @@ function HeroLogo() {
         layout="responsive"
         src={logo}
         quality={100}
+        style={{
+          width: `${350 / 16}rem`,
+          height: `${350 / 16}rem`,
+        }}
       />
     </ResponsiveLogoWrapper>
   );
 }
 
-const ResponsiveLogoWrapper = styled.div`
+const ResponsiveLogoWrapper = styled.picture`
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: ${150 / 16}rem;
   height: ${150 / 16}rem;
 
   @media ${QUERIES.tabletAndUp} {
     width: ${250 / 16}rem;
-    height: ${250 / 16}remx;
+    height: ${250 / 16}rem;
   }
+
   @media ${QUERIES.laptopAndUp} {
     width: ${350 / 16}rem;
     height: ${350 / 16}rem;

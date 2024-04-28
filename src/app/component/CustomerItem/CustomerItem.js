@@ -45,7 +45,7 @@ const ButtonsWrapper = styled.div`
   }
 `;
 
-const HoverWrapper = styled.div`
+const HoverWrapper = styled.picture`
   display: flex;
   width: 100%;
 

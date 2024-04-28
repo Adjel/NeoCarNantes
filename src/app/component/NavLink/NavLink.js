@@ -17,7 +17,7 @@ function NavLink({ children, link, isActive }) {
   );
 }
 
-const Decoration = styled.div`
+const Decoration = styled.li`
   width: 120%;
   height: ${3 / 16}rem;
   background: black;

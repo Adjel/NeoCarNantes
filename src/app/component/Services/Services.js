@@ -44,7 +44,7 @@ export default function Services() {
   );
 }
 
-const Wrapper = styled.article`
+const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,14 +60,14 @@ const Wrapper = styled.article`
   }
 `;
 
-const ItemWrapper = styled.div`
+const ItemWrapper = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: baseline;
   align-items: center;
 `;
 
-const ResponsiveItemWrapper = styled.div`
+const ResponsiveItemWrapper = styled.picture`
   width: ${60 / 16}rem;
   height: ${60 / 16}rem;
 

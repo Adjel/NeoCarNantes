@@ -79,6 +79,16 @@ const ContactWrapper = styled.section`
 `;
 
 const ImageWrapper = styled.picture`
-  width: ${290 / 16}rem;
-  height: ${290 / 16}rem;
+  width: ${120 / 16}rem;
+  height: ${120 / 16}rem;
+
+  @media ${QUERIES.tabletAndUp} {
+    width: ${210 / 16}rem;
+    height: ${210 / 16}rem;
+  }
+
+  @media ${QUERIES.laptopAndUp} {
+    width: ${290 / 16}rem;
+    height: ${290 / 16}rem;
+  }
 `;

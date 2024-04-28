@@ -57,7 +57,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const Grid = styled.section`
+const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: ${28 / 16}rem;

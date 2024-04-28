@@ -14,24 +14,26 @@ export default function Home() {
     <body>
       <Wrapper>
         <ScrollWrapper>
-          <section id="hero">
-            <Hero />
-          </section>
-          <LargeSection id="services">
-            <Services />
-          </LargeSection>
-          <LargeSection id="story">
-            <BrandStory />
-          </LargeSection>
-          <section id="features">
-            <Features />
-          </section>
-          <section id="customers">
-            <Customers />
-          </section>
-          <LargeSection id="contact">
-            <Contact />
-          </LargeSection>
+          <main>
+            <section id="hero">
+              <Hero />
+            </section>
+            <LargeSection id="services">
+              <Services />
+            </LargeSection>
+            <LargeSection id="story">
+              <BrandStory />
+            </LargeSection>
+            <section id="features">
+              <Features />
+            </section>
+            <section id="customers">
+              <Customers />
+            </section>
+            <LargeSection id="contact">
+              <Contact />
+            </LargeSection>
+          </main>
           <Footer />
         </ScrollWrapper>
         <HeaderWrapper>
